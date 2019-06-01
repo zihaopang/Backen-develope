@@ -7,7 +7,7 @@
 
 &emsp;
 &emsp;
-# ![](https://github.com/zihaopang/Backen-develope/blob/master/pics/%E6%8C%87%E5%8D%97%E9%92%88-01.png) C++
+# ![](https://github.com/zihaopang/Backen-develope/blob/master/pics/%E6%98%BE%E7%A4%BA%E5%99%A8-01.png) C++
 &emsp;
 # ![](https://github.com/zihaopang/Backen-develope/blob/master/pics/%E7%81%AF%E6%B3%A1-01.png) 算法
 &emsp;
