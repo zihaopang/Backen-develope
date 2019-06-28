@@ -43,7 +43,7 @@ int connect(int sock,struct sockaddr* servaddr,socklen_t addrlen);
 
 # 实现迭代服务器端/客户端
 之前讨论的Hello world服务器处理完一个客户端连接请求立即退出，没有意义。如果想要继续受理后续的客户端连接请求，要插入循环语句。
-</br>![迭代服务器函数调用顺序]https://github.com/zihaopang/Backen-develope/blob/master/pics/tcpipCoding_pics/%E8%BF%AD%E4%BB%A3%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%87%BD%E6%95%B0%E8%B0%83%E7%94%A8%E9%A1%BA%E5%BA%8F.PNG)</br>
+</br>![迭代服务器函数调用顺序](https://github.com/zihaopang/Backen-develope/blob/master/pics/tcpipCoding_pics/%E8%BF%AD%E4%BB%A3%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%87%BD%E6%95%B0%E8%B0%83%E7%94%A8%E9%A1%BA%E5%BA%8F.PNG)</br>
 代码见0622
 
 ### 回声客户端存在的问题
