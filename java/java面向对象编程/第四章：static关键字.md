@@ -28,12 +28,14 @@ public class JavaDemo{
 }
 ```
 ### 内存分析
-![static分析](http://)
+![static分析](https://github.com/zihaopang/Backen-develope/blob/master/pics/Java/Java%E5%9F%BA%E7%A1%80/9.static%E5%88%86%E6%9E%90.JPG)
+
 如果此时需要改变国家，并且产生了5000W个对象，那么此时将是一场噩梦。
 因为这5000W个对象都需要逐个修改国家属性，所以在整体设计上就出现了问题。
 那么应该将conutry修改为公共属性:`static String country="中华冥国"`
 此时的内存关系图如下（全局数据区）
-![static分析2](http://)
+![static分析2](https://github.com/zihaopang/Backen-develope/blob/master/pics/Java/Java%E5%9F%BA%E7%A1%80/11.static%E5%88%86%E6%9E%902.JPG)
+
 对于ststic属性的访问需要注意一点：由于其本身是一个公共的属性，虽然可以通过对象访问，但是最好的做法还是通过所有对象的最高代表（类）来进行访问，所以static属性可以由类名称直接调用，比如：`Person.country`
 所以属性可以在没有被对象实例化的时候使用，需要存储公共信息的时候才需要static
 
