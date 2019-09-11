@@ -31,7 +31,7 @@ public class String Demo{
 # 字符串常量是String类的匿名对象
 程序之中不会提供有字符串这样的基本数据类型，那么提供的只是一个String类，所以，任何一个字符串常量都是String类的匿名对象
 比如：`String str = "mldn"`
-![19.字符串常量](http://)
+![19.字符串常量](https://github.com/zihaopang/Backen-develope/blob/master/pics/Java/Java%E5%9F%BA%E7%A1%80/19.%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%B8%B8%E9%87%8F.JPG)
 所以直接赋值的描述就是：将一个匿名对象设置一个具体的引用。
 建议：将字符串续航两写在前面：
 `"mldn".equals(input)`,因为equals可以判断输入是否为空，不会产生NullPointer.
@@ -39,7 +39,7 @@ public class String Demo{
 # String类两种实例化方式的区别
 1、分析直接赋值的方式：
 `String str = "mldn"`,这种情况下只会开辟一块堆内存空间，此时的内存关系图如下：
-![19.字符串常量](http://)
+![19.字符串常量](https://github.com/zihaopang/Backen-develope/blob/master/pics/Java/Java%E5%9F%BA%E7%A1%80/19.%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%B8%B8%E9%87%8F.JPG)
 也可以实现String赋值时候的数据共享：
 ```
 String strA = "mldn";
@@ -47,12 +47,12 @@ String strB = "mldn";
 System.out.println(strA == strB);//地址判断,true
 ```
 结果是true，这就说明这两个对象所指向的堆内存是同一个。内存关系如图所示：
-![20.共享数据内存](http://)
+![20.共享数据内存](https://github.com/zihaopang/Backen-develope/blob/master/pics/Java/Java%E5%9F%BA%E7%A1%80/20.%E5%86%85%E5%AD%98%E5%85%B1%E4%BA%AB.JPG)
 这说明每一次创建新的字符串的时候，都会从字符串池当中检查有没有该字符串。如果字符串池当中没有没有需要的数据，则新建数据
-![21.字符串池](http://)
+![21.字符串池](https://github.com/zihaopang/Backen-develope/blob/master/pics/Java/Java%E5%9F%BA%E7%A1%80/21.%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%B1%A0.JPG)
 ### 分析构造方法的实例化
 `String str = new String("mldn");`
-![22.String关键字new](http://)
+![22.String关键字new](https://github.com/zihaopang/Backen-develope/blob/master/pics/Java/Java%E5%9F%BA%E7%A1%80/22.String%E5%85%B3%E9%94%AE%E5%AD%97new.JPG)
 如上图，又开辟了一个"mldn"的内存数组，这时原来的str指向新开辟的"mldn"，原来的变成垃圾，所以，可以看出，直接赋值比new更节省空间，因为他会有字符串池，而new是在堆内存中重新申请空间。
 同时，用new构造字符串对象的时候，该字符串不会自动保存到字符串池中。实质上来讲，用new构造字符串，就是构造一个自己专用的空间，但是也可以手工入池，该方法叫做：public String intern();
 
@@ -84,7 +84,7 @@ public class Test{
 }
 ```
 本程序之中所给出的内容全部都是常量数据，在程序加载的时候会对字符串进行连接，最终指向的是一个堆内存。如图：
-![23.String常量池](http://)
+![23.String常量池](https://github.com/zihaopang/Backen-develope/blob/master/pics/Java/Java%E5%9F%BA%E7%A1%80/23.String%E5%B8%B8%E9%87%8F%E6%B1%A0.JPG)
 ### 举例
 ```
 public class Test{
@@ -112,7 +112,7 @@ public class Test{
 }
 ```
 分析一下本程序所进行的内存处理操作：
-![24.String内容不可修改](http://)
+![24.String内容不可修改](https://github.com/zihaopang/Backen-develope/blob/master/pics/Java/Java%E5%9F%BA%E7%A1%80/24.String%E5%86%85%E5%AE%B9%E4%B8%8D%E5%8F%AF%E4%BF%AE%E6%94%B9.JPG)
 可以看出，改变的并不是字符串，而是不断地放弃原有空间，让其变为垃圾，而后再指向新的空间。
 
 # Java中的主方法
