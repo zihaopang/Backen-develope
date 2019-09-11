@@ -7,7 +7,7 @@
 - 表的多行定义 = 对象数组
 - 表的外键关联 = 引用关联
 
-![18.数据表映射](http://)
+![18.数据表映射](https://github.com/zihaopang/Backen-develope/blob/master/pics/Java/Java%E5%9F%BA%E7%A1%80/18.%E6%95%B0%E6%8D%AE%E8%A1%A8%E6%98%A0%E5%B0%84.JPG)
 
 Java类设计：
 - 根据部门信息获取以下内容
