@@ -5,7 +5,7 @@
 
 | Chapter1 | Chapter2  | Chapter3| Chapter4 |Chapter6|
 |--------|-------------|---------|----------|--------|
-|   C++  | 数据机构与算法| 操作系统  | 计算机网络|  项目   |
+|   Java  | 数据机构与算法| 操作系统  | 计算机网络|  项目   |
 
 
 
@@ -13,7 +13,7 @@
 
 &emsp;
 
-# ![](https://github.com/zihaopang/Backen-develope/blob/master/pics/%E6%98%BE%E7%A4%BA%E5%99%A8-01.png) C++
+# ![](https://github.com/zihaopang/Backen-develope/blob/master/pics/%E6%98%BE%E7%A4%BA%E5%99%A8-01.png) Java
 
 &emsp;
 
