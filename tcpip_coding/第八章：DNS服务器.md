@@ -33,3 +33,18 @@ struct hostent
 - h_addr_list:以整数形式保存域名对应的IP地址
 
 调用gethostbyname后返回的hostent的结构体如下：
+</br>![hostent结构体变量](http://)</br>
+
+//代码见0629
+
+### 利用IP地址获取域名
+```
+#include <netdb.h>
+
+struct hostent* gethostbyaddr(const char* addr,socklen_t len,int family);
+```
+- addr:结构体
+- len:第一个参数的字节数
+- family:IP4V/IPV6
+
+
