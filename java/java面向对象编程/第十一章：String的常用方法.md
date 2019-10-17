@@ -18,7 +18,7 @@
 # 字符串比较
 主要是equals()方法，该方法区分大小写。
 
-| 方法名 |   作用     |
+| 方法名 |   作用  |
 |--------|--------|
 | public boolean equals(String anObject)| 区分大小写的相等判断 |
 | public boolean equalsIgnoreCase(String str)| 不区分大小写比较|
