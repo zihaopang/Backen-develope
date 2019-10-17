@@ -44,8 +44,10 @@ public class Test{
 }
 ```
 时序图如图所示：
+
 ![38.时序图](https://github.com/zihaopang/Backen-develope/blob/master/pics/Java/Java%E5%9F%BA%E7%A1%80/38.%E6%97%B6%E5%BA%8F%E5%9B%BE.JPG)
 
 # 用例图
 用例图描述的是程序的执行分配，例如：现在如果是系统管理员可能拥有系统初始化、系统备份、公告发布的功能、而公告管理员只是负责公告的管理，不应该负责系统的管理，所以就可以使用用例图加一描述说明。如下图
+
 ![39.用例图](https://github.com/zihaopang/Backen-develope/blob/master/pics/Java/Java%E5%9F%BA%E7%A1%80/39.%E7%94%A8%E4%BE%8B%E5%9B%BE.JPG)
