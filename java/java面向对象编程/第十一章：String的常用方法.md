@@ -1,13 +1,14 @@
 # 字符串与字符数组
+
 | No | 方法名称 | 作用 |
 |----|---------|-----|-----|
 | 01 |  public String(char[] value)| 将字符数组转化为字符串|
-| 02 | public String(char[] value,int offset,int count)|将部分字符数组转换为字符串
+| 02 | public String(char[] value,int offset,int count)|将部分字符数组转换为字符串|
 | 03 | public char charAt(int index) | 获取指定字符|
 | 04 | public char[] toCharArray()| 转换为字符数组|
 
 # 字符串与字节数组
-| 名称 | 作用
+| 名称 | 作用|
 |--------|--------|
 |public String(byte[] bytes)|将全部的字节数组变为字符串|
 | public String(byte[] bytes.int offset,int length)| 将部分字节数组构成字符串|
