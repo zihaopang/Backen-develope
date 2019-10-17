@@ -2,7 +2,7 @@
 
 | No | 方法名称 | 作用 |
 |----|---------|-----|-----|
-| 01 |  public String(char[] value)| 将字符数组转化为字符串|
+| 01 | public String(char[] value)| 将字符数组转化为字符串|
 | 02 | public String(char[] value,int offset,int count)|将部分字符数组转换为字符串|
 | 03 | public char charAt(int index) | 获取指定字符|
 | 04 | public char[] toCharArray()| 转换为字符数组|
