@@ -31,7 +31,7 @@ public class LearnThread {
 ```
 但是启动线程需要调用start方法，而不是run方法。并且，每一个线程对象只允许start一次，多以调用start会产生异常。
 Thread使用start执行的底层分析：
-![40.Thread执行分析](http://)
+![40.Thread执行分析](https://github.com/zihaopang/Backen-develope/blob/master/pics/Java/Java%E5%9F%BA%E7%A1%80/40.Thread%E6%89%A7%E8%A1%8C%E5%88%86%E6%9E%90.JPG)
 所哟一多线程启动只能用start方法。
 
 # Runnable接口实现多线程
@@ -68,9 +68,9 @@ public class LearnThread {
 
 # Thread与Runnable关系
 经过一系列的分析之后我们可以发现，在多线程的首先过程之中已经有了两种做法：Thread与Runnable接口。而Runnable是比较方便的，因为其可以避免单继承的局限，同时也可以更好的进行功能的扩充。在进行Threa启动多线程的时候点用的是start()方法，而后找到的是run()方法，但通过Thread实现Runnable接口对象的时候，那么该接口对象将被Thread类中的target属性所保存，在执行start时候就会调用run()方法，而这个run()方法去调用Runnable接口子类被覆写过的run()方法
-![41.Thread与Runnable关系](http://)
+![41.Thread与Runnable关系](https://github.com/zihaopang/Backen-develope/blob/master/pics/Java/Java%E5%9F%BA%E7%A1%80/41.Thread%E4%B8%8ERunnable%E5%85%B3%E7%B3%BB.JPG)
 多线程开发框架：Thread负责线程，Runnable负责资源
-![42.多线程开发](http://)
+![42.多线程开发](https://github.com/zihaopang/Backen-develope/blob/master/pics/Java/Java%E5%9F%BA%E7%A1%80/42.%E5%A4%9A%E7%BA%BF%E7%A8%8B%E5%BC%80%E5%8F%91.JPG)
 ### 范例：买票程序：实现多个进程的并发访问
 ```
 class MyThread implements Runnable{
@@ -94,7 +94,7 @@ public class LearnThread {
     }
 }
 ```
-![43.内存图](http://)
+![43.内存图](https://github.com/zihaopang/Backen-develope/blob/master/pics/Java/Java%E5%9F%BA%E7%A1%80/43.%E5%86%85%E5%AD%98%E5%9B%BE.JPG)
 
 # Callable实现多线程
 Runnable有一个缺点，就是线程执行完毕之后无法获取返回值，考虑Callable.
@@ -163,4 +163,4 @@ public class Demo {
 ```
 
 # 多线程运行状态
-![44.多线程运行状态](http://)
+![44.多线程运行状态](https://github.com/zihaopang/Backen-develope/blob/master/pics/Java/Java%E5%9F%BA%E7%A1%80/44.%E5%A4%9A%E7%BA%BF%E7%A8%8B%E8%BF%90%E8%A1%8C%E7%8A%B6%E6%80%81.JPG)
