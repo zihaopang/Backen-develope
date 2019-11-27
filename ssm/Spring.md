@@ -10,13 +10,13 @@
 
 4.主要内容：
 
-![1.spring简介](http://)
+![1.spring简介](https://github.com/zihaopang/Backen-develope/blob/master/pics/ssm/1.spring%E7%AE%80%E4%BB%8B.JPG)
 
 5.ioc:inversion of control
 
 案例一：spring_ioc1:
 程序结构：
-![2.spring_ioc1](http://)
+![2.spring_ioc1](https://github.com/zihaopang/Backen-develope/blob/master/pics/ssm/2.spring_ioc1.JPG)
 UserDao.java:
 
 ```
@@ -118,9 +118,9 @@ public class Test {
 - 
 
 整体框架：
-![3.srping_hello_整体](http://)
+![3.srping_hello_整体](https://github.com/zihaopang/Backen-develope/blob/master/pics/ssm/3.srping_hello_%E6%95%B4%E4%BD%93.JPG)
 引用库：
-![4.spring_hello_libs](http://)
+![4.spring_hello_libs](https://github.com/zihaopang/Backen-develope/blob/master/pics/ssm/4.spring_hello_libs.JPG)
 
 Hello.java文件
 
@@ -176,7 +176,7 @@ IOC的实现其实就是bean工厂
 举例：
 
 程序框架：
-![5.spring_ioc2整体](http://)
+![5.spring_ioc2整体](https://github.com/zihaopang/Backen-develope/blob/master/pics/ssm/5.spring_ioc2%E6%95%B4%E4%BD%93.JPG)
 库文件同上个程序，代码同第一个程序，主要是Test.java文件和beans.xml文件
 
 Test.java:
@@ -408,7 +408,7 @@ public class Test {
 ```
 3、import：可以引用外部xml文件,可以进行团队协作
 
-![6.import](http://)
+![6.import](https://github.com/zihaopang/Backen-develope/blob/master/pics/ssm/6.import.JPG)
 
 beans.xml
 ```
@@ -710,7 +710,7 @@ public class Client {
 }
 ```
 
-![7.代理模式](http://)
+![7.代理模式](https://github.com/zihaopang/Backen-develope/blob/master/pics/ssm/7.%E4%BB%A3%E7%90%86%E6%A8%A1%E5%BC%8F.JPG)
 
 静态代理的好处：
 - 使得真实角色处理的业务更加纯粹，不用去关注一些公共业务。
@@ -755,7 +755,7 @@ Static Object newProxyInstance(ClassLoader loader,Class<?>[] interfaces,Invocati
 
 程序结构:
 
-![8.动态代理](http://)
+![8.动态代理](https://github.com/zihaopang/Backen-develope/blob/master/pics/ssm/8.%E5%8A%A8%E6%80%81%E4%BB%A3%E7%90%86.JPG)
 
 proxyInovatonHandler.java:
 
@@ -843,14 +843,14 @@ public class Client {
 
 比如银行取款：
 
-![9.银行取款](http://)
+![9.银行取款](https://github.com/zihaopang/Backen-develope/blob/master/pics/ssm/9.%E9%93%B6%E8%A1%8C%E5%8F%96%E6%AC%BE.JPG)
 
 这两者，都有一个相同的验证用户的流程
 　　这个时候 AOP 就可以来帮我们简化代码了，首先，写代码的时候可以不写这个验证用户的步骤，即完全不考虑验证用户，写完之后，在另外一个地方，写好验证用户的代码，然后告诉 Spring 你要把这一段代码加到哪几个地方，Spring就会帮你加过去，这里还只是两个地方，如果有多个控制流，这样写代码会大大节约时间。
 
 上面那个 验证用户 的方框，我们可以把它当成一块板子，在这块板子上插入一些控制流程，这块板子就可以当成是 AOP 中的一个切面。所以 AOP 的本质是在一系列的纵向的控制流程中，把那些相同的子流程提取成一个横向的面，把纵向流程画成一条直线，而 AOP 相当于把相同的地方连起来了。
 
-![10.切面示意](http://)
+![10.切面示意](https://github.com/zihaopang/Backen-develope/blob/master/pics/ssm/10.%E5%88%87%E9%9D%A2%E7%A4%BA%E6%84%8F.JPG)
 
 2.名词解释
 
@@ -876,7 +876,7 @@ public class Client {
 
 程序结构：
 
-![11.spring_aop](http://)
+![11.spring_aop](https://github.com/zihaopang/Backen-develope/blob/master/pics/ssm/11.spring_aop.JPG)
 
 额外的包：
 aopalliance.jar,aspectjweaver-1.8.9.jar
@@ -986,7 +986,7 @@ bean.xml:
 
 程序结构:
 
-![12.spring_aop2](http://)
+![12.spring_aop2](https://github.com/zihaopang/Backen-develope/blob/master/pics/ssm/12.spring_aop2.JPG)
 
 和前面的程序只有在Log.java和beans.xml的配置文件中有所不同：
 
