@@ -2,7 +2,7 @@
 
 1.首先，什么是mvc?MVC的理念就是把数据处理、数据展示(界面)和程序/用户的交互三者分离开的一种编程模式。如图：
 
-![13.mvc介绍](http://)
+![13.mvc介绍](https://github.com/zihaopang/Backen-develope/blob/master/pics/ssm/13.mvc%E4%BB%8B%E7%BB%8D.JPG)
 
 2.为什么要使用MVC?
 
@@ -42,7 +42,7 @@
 
 6.springmvc处理流程简介
 
-![14.spring处理流程](http://)
+![14.spring处理流程](https://github.com/zihaopang/Backen-develope/blob/master/pics/ssm/14.servlet%E5%8A%9F%E8%83%BD%E4%BB%8B%E7%BB%8D.JPG)
 
 - 客户端（浏览器）发送请求，直接请求到DispatcherServlet。
 - DispatcherServlet根据请求信息调用HandlerMapping，解析请求对应的Handler。
