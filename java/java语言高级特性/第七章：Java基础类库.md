@@ -65,7 +65,9 @@ sb.append("www.baidu.com").delete(2,5);
 
 # CharSequence接口
 CharSequence是一个描述字符串结构的接口，在这个接口里面一般发现有三种常见子类，结构如下：
-![47.charSequence分析](http://)
+
+![47.charSequence分析](https://github.com/zihaopang/Backen-develope/blob/master/pics/Java/Java%E5%9F%BA%E7%A1%80/47.charSequence%E5%88%86%E6%9E%90.JPG)
+
 即StringBuffer与StringBuilder不仅可以实现CharSequence接口，也可以接收CharSequence作为参数。
 charSequence本身是一个接口，在该接口中也有定义如下操作方法;
 - 获取指定索引字符：public char charAt(int index)
