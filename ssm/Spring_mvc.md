@@ -42,7 +42,7 @@
 
 6.springmvc处理流程简介
 
-![14.spring处理流程](https://github.com/zihaopang/Backen-develope/blob/master/pics/ssm/14.servlet%E5%8A%9F%E8%83%BD%E4%BB%8B%E7%BB%8D.JPG)
+![14.spring处理流程](https://github.com/zihaopang/Backen-develope/blob/master/pics/ssm/14.spring%E5%A4%84%E7%90%86%E6%B5%81%E7%A8%8B.png)
 
 - 客户端（浏览器）发送请求，直接请求到DispatcherServlet。
 - DispatcherServlet根据请求信息调用HandlerMapping，解析请求对应的Handler。
