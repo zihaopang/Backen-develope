@@ -15,8 +15,11 @@
 5.ioc:inversion of control
 
 案例一：spring_ioc1:
+
 程序结构：
+
 ![2.spring_ioc1](https://github.com/zihaopang/Backen-develope/blob/master/pics/ssm/2.spring_ioc1.JPG)
+
 UserDao.java:
 
 ```
@@ -118,8 +121,11 @@ public class Test {
 - 
 
 整体框架：
+
 ![3.srping_hello_整体](https://github.com/zihaopang/Backen-develope/blob/master/pics/ssm/3.srping_hello_%E6%95%B4%E4%BD%93.JPG)
+
 引用库：
+
 ![4.spring_hello_libs](https://github.com/zihaopang/Backen-develope/blob/master/pics/ssm/4.spring_hello_libs.JPG)
 
 Hello.java文件
@@ -176,7 +182,9 @@ IOC的实现其实就是bean工厂
 举例：
 
 程序框架：
+
 ![5.spring_ioc2整体](https://github.com/zihaopang/Backen-develope/blob/master/pics/ssm/5.spring_ioc2%E6%95%B4%E4%BD%93.JPG)
+
 库文件同上个程序，代码同第一个程序，主要是Test.java文件和beans.xml文件
 
 Test.java:
@@ -466,6 +474,7 @@ entity.xml:
 	<!-- 使用工厂模式创建 -->
 </bean>
 ```
+
 3、spring注入：setter注入
 要求被注入的属性必须有set方法。set方法的方法名由set+属性首字母大写。如果属性是boolean，没有get方法，是is
 
