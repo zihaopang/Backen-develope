@@ -3,6 +3,7 @@ Annotion是从JDK1.5之后提出的一个新的开发技术结构，利用Annoti
 要想清除Annotation的产生意义，则必须了解一下程序开发结构的历史，从历史上来说程序开发一共分为了三个过程：
 
 1.过程一：在程序定义的时候将所有可能使用到的资源全部定义在程序的代码之中
+
 	- 如果此时的程序的相关信息发生了改变，那么对程序而言就需要进行源代码的修改，维护不方便，遮掩个做法不方便
 	
 ![27.程序资源](https://github.com/zihaopang/Backen-develope/blob/master/pics/Java/Java%E5%9F%BA%E7%A1%80/27.%E7%A8%8B%E5%BA%8F%E8%B5%84%E6%BA%90.JPG)
