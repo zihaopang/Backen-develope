@@ -24,6 +24,7 @@ public class Test{
 # 内存操作流
 之前使用的全都是文件操作流，文件操作流的特点，程序利用InputStream读取文件内容，所有的操作都是以文件为终端的。但如果现在需要IO操作，但是又不希望产生文件（临时文件），就可以以内存为终端进行处理。
 在Java里面提供有两类的内存操作流：
+
 - 字节内存操作流：ByteArrayOutputStream、ByteArrayInputStream
 - 字符内存操作流：CharArrayWriter、CharArrayReader
 
@@ -63,6 +64,7 @@ public class TestDemo {
 对于管道流，也分为两类：
 
 1.字节管道流：PipeOutputStream、PipedInputStream
+
 	- 连接处理：public void connect(PipedInputStream snk) throws IOException
 	
 2.字符管道流：PipedWriter、PipedReader
