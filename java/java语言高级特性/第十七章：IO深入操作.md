@@ -151,11 +151,12 @@ class ReceiveThread implements Runnable{
 
 # RandomAccessFile
 传统的读取文件的方式就是InputStream和OutputStream或者reader和writer，这些只能一部分一部分的读取。那么现在如果有一个文件很大，就需要采用RandomAccessFile进行处理。但这个文件需要有一个完善的保存形式。完善的保存形式就是规整的保存，比如下图：
-![56.RandomAccessFile](http://)
+![56.RandomAccessFile](https://github.com/zihaopang/Backen-develope/blob/master/pics/Java/Java%E5%9F%BA%E7%A1%80/56.RandomAccessFile.jpg)
 即使wangwu和lisi没有那么长，也要保存为空格
 
 RandomAccessFile里面的操作方法：
 1.构造方法：public randomAccessFile(File file,String mode) throws FileNotFoundException
+
 	- 文件处理模式：r,rw,分别是读和读写
 
 ### 范例：实现文件的保存
@@ -175,6 +176,7 @@ public class Test{
 	}
 ```
 RandomAccessFile最大的特点在于数据的读取处理上，可以进行跳字节读取`public int skipBytes(int n) throws IOException;`
+
 ### 范例：读取数据
 ```
 public class Test{
