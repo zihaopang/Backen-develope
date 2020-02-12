@@ -58,7 +58,7 @@ public class TestDemo {
 
 # 管道流
 管道流主要是实现两个线程之间的IO处理操作
-![55.管道流](http://)
+![55.管道流](https://github.com/zihaopang/Backen-develope/blob/master/pics/Java/Java%E5%9F%BA%E7%A1%80/55.%E7%AE%A1%E9%81%93%E6%B5%81.jpg)
 对于管道流，也分为两类：
 1.字节管道流：PipeOutputStream、PipedInputStream
 	- 连接处理：public void connect(PipedInputStream snk) throws IOException
