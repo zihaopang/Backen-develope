@@ -157,6 +157,7 @@ class ReceiveThread implements Runnable{
 即使wangwu和lisi没有那么长，也要保存为空格
 
 RandomAccessFile里面的操作方法：
+
 1.构造方法：public randomAccessFile(File file,String mode) throws FileNotFoundException
 
 	- 文件处理模式：r,rw,分别是读和读写
