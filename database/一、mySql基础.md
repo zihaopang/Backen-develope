@@ -318,22 +318,22 @@ Tip：这个条件等同于不存在，但如果姓名为NULL查询不出来
 
 ```
 SELECT * FROM 表名 ORDER BY 列名 ASC;
-Tip*按sal排序，升序；
+Tip：按sal排序，升序；
 Tip：其中ASC是可以省略的，默认升序
 ```
 2)降序
 
 ```
 SELECT * FROM WHERE emp ORDER BY comm DESC;
-**Tip:**按照comm排序，降序
-**Tip：**其中DESC不能省略
+Tip：按照comm排序，降序
+Tip：其中DESC不能省略
 ```
 
 3)使用多列作为排序条件
 
 ```
 SELECT * FROM WHERE emp ORDER BY sal ASC, comm DESC;
-**Tip：**使用sal 升序排序，如果sal相同时候，使用comm降序排
+Tip：使用sal 升序排序，如果sal相同时候，使用comm降序排
 ```
 三、聚合函数
 聚合函数用来做某一列的纵向运算
@@ -341,16 +341,16 @@ SELECT * FROM WHERE emp ORDER BY sal ASC, comm DESC;
 ```
 1)COUNT
 SELECT COUNT(*) FROM emp;
-**Tip：**计算emp表中所有列都不为NULL的记录的行数
+Tip：计算emp表中所有列都不为NULL的记录的行数
 2)MAX
 SELECT MAX(sal) FROM emp;
-**Tip：**查询最高工资
+Tip：查询最高工资
 3)MIN
 SELECT MIN(sal) FROM emp;
-**Tip：**查询最低工资
+Tip：查询最低工资
 4)SUM
 SELECT SUM(sal) FROM emp;
-**Tip：**查询工资和
+Tip：查询工资和
 5)AVG
 SELECT AVG(sal) FROM emp;
 ```
