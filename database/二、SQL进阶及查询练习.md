@@ -121,7 +121,9 @@ gender VARCHAR(10)
 ```
 
 5.概念模型
+
 对象模型:
+
 is a,
 
 has a(关联)：
