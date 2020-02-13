@@ -21,23 +21,23 @@ LinkedHashMap：
 
 初始化：
 
-Map<String, String> map = new HashMap<String, String>();
+`Map<String, String> map = new HashMap<String, String>();`
 
 插入元素：
 
-map.put("key1", "value1");
+`map.put("key1", "value1");`
 
 获取元素：
 
-map.get("key1")
+`map.get("key1")`
 
 移除元素：
 
-map.remove("key1");
+`map.remove("key1");`
 
 清空map:
 
-map.clear();
+`map.clear();`
 
 ```
 public class Test {
