@@ -26,31 +26,38 @@
 然后重启电脑
 
 一、MySql安装成功后会在两个目录中存储文件
+
 - D:\Program Files\MySQL\MySQL Server 5.1:DBMS管理程序
 - C:\Program Files\MySQL\MySQL Server 5.1\data:DBMS数据库文件（写在MySQL时候不会删除）
 二、MySQL重要文件
+
 - D:\Program Fils\MySQL\MySQL Server 5.1\bin\mysql.exe:客户端程序，需要服务器开启
 - D:\Program Fils\MySQL\MySQL Server 5.1\bin\mysqld.exe:服务器程序，必须先启动它，客户端才能连接上
 - D:\Program Fils\MySQL\MySQL Server 5.1\bin\my.ini：服务器配置文件
 
 三、C:\ProgramData\MySQL\MySQL Server 5.5\data
+
 - 该目录是隐藏目录，选哟手动输入，这个目录下的每个目录代表一个数据库
 - 在某个数据库目录下会有0——N个.frm的文件，每个frm文件表示一个table,它由DBMS来读写
 
 四、my.ini:MySQL最为重要的配置文件
+
 - 配置MySQL端口：3306
 - 配置字符编码
+
 	- [client]下配置客户端编码：default-character-set=gbk
 	- [mysqld]下配置服务器编码：character-set-server=utf-8
 - 配置二进制数据大小上限：max_allowed_packet=8M
 
 # 开启/关闭服务器以及登陆/退出
 服务器操作：
+
 1.开启服务器：net start mysql
 2.关闭服务器：net stop mysql
 
 客户登陆操作：
 1.登陆服务器：mysql -uroot -p123 -hlocalhost
+
 - -u:后面跟随用户名
 - -p:后面跟随密码
 - -h:后面跟随IP
@@ -60,26 +67,33 @@
 # SQL
 1.什么是SQL:结构化查询语言
 2.SQL的作用：客户端使用SQL来操作服务器
+
 - 启动mysql.exe，连接服务器后，就可以使用sql来操作服务器了
 - 将来会使用Java程序连接服务器，然后使用sql来操作服务器
 
 SQL语法：
+
 1.SQL语句可以在单行或者多行书写以分号结尾
 2.可以使用空格和缩进来增强语句的可读性
 3.MySQL不区别大小写，建议使用大写
 
 SQL语句分类：
+
 1.DDL（Data Defineition Language）：数据定义语言，用来定义数据库对象：库、表、列等等
 	- 创建、删除、修改：库、表结构，即数据库或者表的结构操作
+	
 2.DML(Data Manipulation Language)：数据操作语言，用来定义数据库记录
 	- 增、删、改、查，即对表的结构进行更新
+	
 3.DCL(Data Control Language)：数据控制语言，用来定义访问权限和安全级别
 	- dql：对表的记录的查询
+	
 4.DQL（Data Query Language）：数据查询语言，用来查询记录
 	- 对用户的创建，及授权
 
 # DDL
 1.数据库：
+
 - 查看所有数据库：SHOW DATABASE；
 - 切换（选择所要操作的）数据库：USE 数据库名
 - 创建数据库：CREATE DATABASE [IF NOT EXISTS] mydb1 [CHARSET=utf-8]
@@ -87,6 +101,7 @@ SQL语句分类：
 - 修改数据库编码：ALTER DATABASE mydb1 CHARACTER SET utf-8
 
 2.数据类型（列类型）
+
 - int:整型
 - double：浮点型,例如double(5,2)表示最多5位数，其中必有两位小数，最大值999.99
 - decimal:浮点型，用在钱方面，不会出现精度缺失的问题
@@ -102,6 +117,7 @@ SQL语句分类：
 	- 小:blob,长度:(2^16-1)B
 	- 中:mediumblob,长度:(2^24-1)B
 	- 大:longblob,长度:(2^32-1)B = 4GB
+	
 date:日期类型，格式为：yyyy-MM-dd;
 time:事件类型，格式为：hh:mm:ss
 timestamp:时间戳类型
@@ -109,7 +125,7 @@ timestamp:时间戳类型
 3.表
 - 创建表:
   CREATE TABLE [IF NOT EXISTS] 表名(
-  	列名 列类型,
+    列名 列类型,
     列名 列类型,
     ...
     列名 列类型
@@ -133,34 +149,45 @@ timestamp:时间戳类型
 
 # DML(数据操作语言，它是对表记录的操作：增删改)
 1.插入数据
+
 - INSERT INTO 表名(列名1,列名2,列名3,...) VALUES(列值1,列值2,...);注意，在数据库中插入字符串（包括日期之类的），必须使用单引号，不可使用双引号。
+
 	- 在表名后给出要插入的列名称，其他没有指定的列等同于插入null值，所以插入记录总是插入一行
 	- 在VALUES后给出列值，值的顺序和个数必须与前面的指定列对应
+	
 - INSERT INTO 表名 VALUES(列值1，列值2);
+
 	- 没有给出要插入的列，那么表示插入所有列
 	- 值的个数必须是该表列的个数
 	- 值的顺序，必须与表创建时给出的列的顺序相同
 
 2.修改数据
+
 - UPDATE 表名 SET 列名1=列值1,列名2=列值2,....[WHERE 条件]
 - 条件(条件可选的)
+
 	- 条件必须是一个boolean类型的值或者表达式：UPDATE t_person SET gender='男', age=age+1, WHERE sid='1';
 	- 条件里面可加的运算符：=、!=、<>、>、<、>=、<=、BETWEEN ... AND、IN(...)、IS NULL、NOT、OR、AND
 
 3.删除数据
+
 - DELETE FROM 表名 [WHERE 条件];
 - TRUNCATE TABLE 表名: TRUNCATE是DDL语句，他先是删除该表，在create该表，而且无法回滚。
 
 select * from xxx(表名);
 
 # DCL(理解)
+
 - 一个项目创建一个用户！一个项目对应的数据库只有一个！
 
 
 1.创建用户
+
 - CREATE USER 用户名@IP地址 IDENTIFIED BY '密码';
+
 	- 用户只能在指定的IP地址上面登陆
 - CREATE USER 用户名@'%' IDENTIFIED BY '密码';
+
 	- 用户可以在任意的IP地址上登陆
 
 2.给用户授权
