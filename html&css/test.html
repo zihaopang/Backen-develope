@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    /* 第一种方式处理高度塌陷 */
+    .box {width:660px;height:220px;overflow: hidden;border: 3px solid black; margin: 0 auto;}
+    .box1 {width: 200px; height: 220px; background: #f00;float: left;padding:10px}
+    .box2 {width: 200px; height: 220px; background: #ff0;float: left;padding:10px}
+    .box3 {width: 200px; height: 220px; background: #f0f;float: left;padding:10px}
+  </style>
+</head>
+
+<body>
+  <div class="box">
+    <div class="box1">
+      Alt text：图片的Alt标签，用来描述图片的关键词，可以不写。最初的本意是当图片因为某种原因不能被显示时而出现的替代文字，
+      后来又被用于SEO，可以方便搜索引擎根据Alt text里面的关键词搜索到图片。
+    </div>
+    <div class="box2">
+      Alt text：图片的Alt标签，用来描述图片的关键词，可以不写。最初的本意是当图片因为某种原因不能被显示时而出现的替代文字，
+      后来又被用于SEO，可以方便搜索引擎根据Alt text里面的关键词搜索到图片。
+    </div>
+    <div class="box3">
+      Alt text：图片的Alt标签，用来描述图片的关键词，可以不写。最初的本意是当图片因为某种原因不能被显示时而出现的替代文字，
+      后来又被用于SEO，可以方便搜索引擎根据Alt text里面的关键词搜索到图片。
+    </div>
+</div>
+  <!-- 第二种方式处理高度塌陷 -->
+  <!-- <div style="clear: both;height: 0; overflow: hidden;"></div> -->
+</body>
+</html>

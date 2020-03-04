@@ -62,3 +62,194 @@
 - 编写HelloController.java，即控制器
 - 编写springmvc配置文件（要先配置xml的catlog）
 
+程序结构：
+
+![17.程序结构](http://)
+
+HelloController.java:
+
+```
+/**
+ * @author pangzihao
+ * HelloController
+ */
+public class HelloController implements Controller{
+
+	/* (non-Javadoc)
+	 * @see org.springframework.web.servlet.mvc.Controller#handleRequest(javax.servlet.http.HttpServletRequest, javax.servlet.http.HttpServletResponse)
+	 */
+	public ModelAndView handleRequest(HttpServletRequest arg0, HttpServletResponse arg1) throws Exception {
+		// TODO Auto-generated method stub
+		ModelAndView mv = new ModelAndView();
+		//封装要显示到视图中的数据
+		mv.addObject("msg", "hello springmvc");
+		
+		//视图名称
+		mv.setViewName("hello");
+		return mv;
+	}
+
+}
+```
+
+springmvc-servlet.xml:
+
+```
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+    xmlns:mvc="http://www.springframework.org/schema/mvc"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans 
+    	http://www.springframework.org/schema/beans/spring-beans-4.2.xsd
+        http://www.springframework.org/schema/context 
+        http://www.springframework.org/schema/context/spring-context-4.2.xsd
+        http://www.springframework.org/schema/mvc 
+        http://www.springframework.org/schema/mvc/spring-mvc-4.2.xsd">
+   <!-- 配置handlerMapping -->
+   <bean class="org.springframework.web.servlet.handler.BeanNameUrlHandlerMapping" />
+   <!-- 配置HandlerAdapter -->
+   <bean class="org.springframework.web.servlet.mvc.SimpleControllerHandlerAdapter" />
+   <!-- 配置渲染器 -->
+   <bean id="jspViewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+       <property name="viewClass" value="org.springframework.web.servlet.view.JstlView"/>
+       <!-- 结果视图的前缀，即如果视图名称为hello，那么文件的位置就在 /WEB-INF/jsp/hello.jsp -->
+       <property name="prefix" value="/WEB-INF/jsp/"/>
+       <!-- 结果视图的后缀 -->
+       <property name="suffix" value=".jsp"/>
+   </bean>
+   <!-- 配置请求和处理  -->
+   <bean name="/hello.do" class="cn.pu.controller.HelloController"/>
+</beans>
+```
+
+web.xml:
+
+```
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" id="WebApp_ID" version="2.5">
+  <display-name>springmvc_hello</display-name>
+  <servlet>
+    <servlet-name>springmvc</servlet-name>
+    <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+    <load-on-startup>1</load-on-startup>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>springmvc</servlet-name>
+    <url-pattern>*.do</url-pattern>
+  </servlet-mapping>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+</web-app>
+```
+
+# 第二讲：使用注解开发springmvc
+
+举例：
+
+程序结构：
+
+![18.spring_annotation结构](http://)
+
+1、导入jar包
+和上面的一样
+2、web.xml配置
+
+```
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" id="WebApp_ID" version="3.0">
+  <display-name>springmvc_annotation</display-name>
+  
+  <!-- DispatcherServlet配置 -->
+  <servlet>
+  	<servlet-name>springmvc</servlet-name>
+  	<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+  	<!-- 配置Dispatcher参数，第一个是contextConfigLocation,就是配置文件的位置 -->
+  	<init-param>
+  		<param-name>contextConfigLocation</param-name>
+  		<param-value>classpath:mvc.xml</param-value>
+  	</init-param>
+  	<load-on-startup>1</load-on-startup>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>springmvc</servlet-name>
+  	<url-pattern>*.do</url-pattern>
+  </servlet-mapping>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+</web-app>
+```
+
+其中这一段代码：
+
+```
+  	<init-param>
+  		<param-name>contextConfigLocation</param-name>
+  		<param-value>classpath:mvc.xml</param-value>
+  	</init-param>
+```
+
+表明mvc的配置文件位置（src/mvc）
+
+3、Coltroller
+
+```
+/**
+ * @author pangzihao
+ * HelloController
+ */
+@Controller
+public class HelloController {
+	@RequestMapping("/hello")
+	public ModelAndView hello(HttpServletRequest req,HttpServletResponse res){
+		ModelAndView mv = new ModelAndView();
+		//封装要显示到视图中的数据
+		mv.addObject("msg", "hello springmvc annotation");
+		
+		//视图名称
+		mv.setViewName("hello");
+		return mv;
+	}
+```
+
+4、springmvc配置
+
+mvc.xml
+
+```
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+    xmlns:mvc="http://www.springframework.org/schema/mvc"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans 
+    	http://www.springframework.org/schema/beans/spring-beans-4.2.xsd
+        http://www.springframework.org/schema/context 
+        http://www.springframework.org/schema/context/spring-context-4.2.xsd
+        http://www.springframework.org/schema/mvc 
+        http://www.springframework.org/schema/mvc/spring-mvc-4.2.xsd">
+        
+   <!-- 配置渲染器 -->
+   <bean id="jspViewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+       <property name="viewClass" value="org.springframework.web.servlet.view.JstlView"/>
+       <!-- 结果视图的前缀，即如果视图名称为hello，那么文件的位置就在 /WEB-INF/jsp/hello.jsp -->
+       <property name="prefix" value="/WEB-INF/jsp/"/>
+       <!-- 结果视图的后缀 -->
+       <property name="suffix" value=".jsp"/>
+   </bean>
+   <!-- 在controoler包下扫描控制器 -->
+   <context:component-scan base-package="cn.pu.controller" />
+</beans>
+```
+
+
