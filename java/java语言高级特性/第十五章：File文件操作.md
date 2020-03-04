@@ -1,6 +1,6 @@
 # File基本操作
 - 构造方法：public File(String pathname),设置要操作的完整路径
-- 构造方法：public File(File parent String child),这只父路径与子目录
+- 构造方法：public File(File parent,String child),这只父路径与子目录
 - 创建新文件：public boolean createNewFile() throws IOException
 - 判断文件是否存在：public boolean exists();
 - 删除文件：public boolean delete();

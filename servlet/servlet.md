@@ -11,7 +11,7 @@ servlet是javaweb的三大组件之一，它属于动态资源。Servlet的作�
 
 servlet功能介绍：
 
-![14.servlet功能介绍](http://)
+![14.servlet功能介绍](https://github.com/zihaopang/Backen-develope/blob/master/pics/ssm/14.servlet%E5%8A%9F%E8%83%BD%E4%BB%8B%E7%BB%8D.JPG)
 
 每个servlet都会有不同的功能，比如登陆，注册等等
 
@@ -233,11 +233,11 @@ public class CServlet extends GenericServlet{
 
 HttpServlet结构介绍
 
-![15.httpServlet结构介绍](http://)
+![15.httpServlet结构介绍](https://github.com/zihaopang/Backen-develope/blob/master/pics/ssm/15.httpServlet%E7%BB%93%E6%9E%84%E4%BB%8B%E7%BB%8D.JPG)
 
 HttpServlet工作流程简介：
 
-![16.HttpServlet工作流程](http://)
+![16.HttpServlet工作流程](https://github.com/zihaopang/Backen-develope/blob/master/pics/ssm/16.HttpServlet%E5%B7%A5%E4%BD%9C%E6%B5%81%E7%A8%8B.JPG)
 
 示例代码：
 

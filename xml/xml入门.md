@@ -18,10 +18,10 @@
 ### XML的应用
 1.不同的系统之间传输数据
 
-![1.xml应用1](http://)
+![1.xml应用1](https://github.com/zihaopang/Backen-develope/blob/master/pics/xml/1.xml%E5%BA%94%E7%94%A81.JPG)
 2.用来表示生活中有关系的数据
 
-![2.xml应用2](http://)
+![2.xml应用2](https://github.com/zihaopang/Backen-develope/blob/master/pics/xml/2.xml%E5%BA%94%E7%94%A82.JPG)
 3.经常用在配置文件中
 
 比如一些用户名和密码
@@ -36,7 +36,7 @@
 - 文档声明的属性：version:xml的版本；encoding:xml编码：gbk,utf-8,iso8869-1(不包含中文)；standalone:是否需要依赖其他文件 yes/no
 - xml中中文乱码的解决：把设置的编码和保存时候的编码一致即可，原因：
 
-  ![3.xml乱码问题的解决](http://)
+  ![3.xml乱码问题的解决](https://github.com/zihaopang/Backen-develope/blob/master/pics/xml/3.xml%E4%B9%B1%E7%A0%81%E9%97%AE%E9%A2%98%E7%9A%84%E8%A7%A3%E5%86%B3.JPG)
 
 2.定义元素（标签）
 3.定义属性

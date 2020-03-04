@@ -24,6 +24,7 @@ public class Test{
 # 内存操作流
 之前使用的全都是文件操作流，文件操作流的特点，程序利用InputStream读取文件内容，所有的操作都是以文件为终端的。但如果现在需要IO操作，但是又不希望产生文件（临时文件），就可以以内存为终端进行处理。
 在Java里面提供有两类的内存操作流：
+
 - 字节内存操作流：ByteArrayOutputStream、ByteArrayInputStream
 - 字符内存操作流：CharArrayWriter、CharArrayReader
 
@@ -58,11 +59,16 @@ public class TestDemo {
 
 # 管道流
 管道流主要是实现两个线程之间的IO处理操作
-![55.管道流](http://)
+![55.管道流](https://github.com/zihaopang/Backen-develope/blob/master/pics/Java/Java%E5%9F%BA%E7%A1%80/55.%E7%AE%A1%E9%81%93%E6%B5%81.jpg)
+
 对于管道流，也分为两类：
+
 1.字节管道流：PipeOutputStream、PipedInputStream
+
 	- 连接处理：public void connect(PipedInputStream snk) throws IOException
+	
 2.字符管道流：PipedWriter、PipedReader
+
 	- 连接处理：public void connect(PipedReader snk) throws IOException
 
 ### 举例：管道流实现
@@ -145,11 +151,15 @@ class ReceiveThread implements Runnable{
 
 # RandomAccessFile
 传统的读取文件的方式就是InputStream和OutputStream或者reader和writer，这些只能一部分一部分的读取。那么现在如果有一个文件很大，就需要采用RandomAccessFile进行处理。但这个文件需要有一个完善的保存形式。完善的保存形式就是规整的保存，比如下图：
-![56.RandomAccessFile](http://)
+
+![56.RandomAccessFile](https://github.com/zihaopang/Backen-develope/blob/master/pics/Java/Java%E5%9F%BA%E7%A1%80/56.RandomAccessFile.jpg)
+
 即使wangwu和lisi没有那么长，也要保存为空格
 
 RandomAccessFile里面的操作方法：
+
 1.构造方法：public randomAccessFile(File file,String mode) throws FileNotFoundException
+
 	- 文件处理模式：r,rw,分别是读和读写
 
 ### 范例：实现文件的保存
@@ -169,6 +179,7 @@ public class Test{
 	}
 ```
 RandomAccessFile最大的特点在于数据的读取处理上，可以进行跳字节读取`public int skipBytes(int n) throws IOException;`
+
 ### 范例：读取数据
 ```
 public class Test{

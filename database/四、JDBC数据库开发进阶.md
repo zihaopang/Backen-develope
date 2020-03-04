@@ -550,7 +550,7 @@ public class Demo1{
 
 如果又创建了一个线程，那么不会对本地线程有仍和的影响
 
-![3.ThreadLocal类](http://)
+![3.ThreadLocal类](https://github.com/zihaopang/Backen-develope/blob/master/pics/database/3.ThreadLocal%E7%B1%BB.jpg)
 
 ThreadLocal通常用在一个类成员上面，多个线程访问它的时候，每个线程都有自己的副本，互不干扰
 Spring中把Connection放到了ThreadLocal中！

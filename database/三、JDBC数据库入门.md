@@ -9,7 +9,7 @@ JDBC(Java DataBase Connectivity)，就是Java数据库连接，说白了就是�
 
 # JDBC原理
 早期SUN公司准备开发一套API可以连接各种类型的数据库，但是发现这是不可能的。所以SUN公司转而开发了一套标准，称为JDBC，二各个厂商提供的，遵循了JDBC规范的，可以访问自己数据库的API被称之为驱动！
-![1.JDBC原理](http://)
+![1.JDBC原理](https://github.com/zihaopang/Backen-develope/blob/master/pics/database/1.JDBC%E5%8E%9F%E7%90%86.JPG)
 
 #### JDBC增删改查代码：
 
@@ -525,6 +525,7 @@ TIMESTAMP:java.sql.Timestamp
 ### 大数据
 一、什么是大数据
 所谓大数据，就是大的字节数据，或者大的字符数据，标准的SQL语言提供以下类型保存大数据类型：
+
 |类型|长度|
 |--------|--------|
 |tinyblob|2^8-1B(256B)|
@@ -537,6 +538,7 @@ TIMESTAMP:java.sql.Timestamp
 |longclob|2^32-1B(4G)|
 
 但是在mysql没有提供tinyclob、colb、mediumclob、longclob，而是使用如下几种类型处理文本数据;
+
 |类型|长度|
 |--------|--------|
 |tinytext|2^8-1B(256B)|

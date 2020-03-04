@@ -1,26 +1,43 @@
 Map接口中键和值一一映射. 可以通过键来获取值。
 
 # 类型区别
-HashMap
+HashMap：
+
 最常用的Map,它根据键的HashCode 值存储数据,根据键可以直接获取它的值，具有很快的访问速度。
-TreeMap
+
+TreeMap：
+
 能够把它保存的记录根据键(key)排序,默认是按升序排序，也可以指定排序的比较器，当用Iterator 遍历TreeMap时，得到的记录是排过序的。
-Hashtable
+
+Hashtable：
+
 与 HashMap类似,不同的是:key和value的值均不允许为null;它支持线程的同步，即任一时刻只有一个线程能写Hashtable,因此也导致了Hashtale在写入时会比较慢。
-LinkedHashMap
+
+LinkedHashMap：
+
 保存了记录的插入顺序，在用Iterator遍历LinkedHashMap时，先得到的记录肯定是先插入的.在遍历的时候会比HashMap慢。key和value均允许为空，非同步的。
 
 # 相关操作：
+
 初始化：
-Map<String, String> map = new HashMap<String, String>();
+
+`Map<String, String> map = new HashMap<String, String>();`
+
 插入元素：
-map.put("key1", "value1");
+
+`map.put("key1", "value1");`
+
 获取元素：
-map.get("key1")
+
+`map.get("key1")`
+
 移除元素：
-map.remove("key1");
+
+`map.remove("key1");`
+
 清空map:
-map.clear();
+
+`map.clear();`
 
 ```
 public class Test {
@@ -147,6 +164,7 @@ public class Test {
 ```
 
 # Map 遍历
+
 使用for循环：
 
 ```
