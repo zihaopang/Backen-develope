@@ -23,5 +23,17 @@ asynchronous javascript and xml:异步的js和xml
 
 - 可以使用js接收服务器的响应，然后使用js来局部刷新!
 
+### Ajax四操作
+
+一、Ajax发送异步请求（四步请求）
+1.第一步（得到XMLHttpRequest）
+
+- 大部分浏览器都支持：var xmlHttp = new XMLHttpRequest();
+- IE6.0: var xmlHttp = new ActiveXObject();
+- IE5.5以及更早的版本：var xmlHttp = new ActiveXObject();
+
+
+
+
 
 
