@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+</head>
+<body>
+    <div id="div1">
+        <p>段落</p>
+        <ul>
+            <li id="li1">1</li>
+            <li id="li2">2</li>
+            <li id="li3">3</li>
+        </ul>
+    </div>
+
+    <script>
+        $(document).ready(function(){
+            $("#li1").siblings().css({
+                "border":"2px solid green"
+            });
+            $("#li1").next().css({
+                "background-color":"red"
+            });
+            $("ul").prev().css({
+                "background-color":"green"
+            });
+            $("#div1").last().css({
+                //...
+            });
+            $("#div1").frist().css({
+                //...
+            });
+        });
+    </script>
+</body>
+</html>

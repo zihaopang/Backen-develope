@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="p1"></p>
+    <p id="p2"></p>
+
+    <script>
+        let x=2;//let的作用域只在对应的块中
+        document.getElementById("p1").innerHTML="x:"+x;
+        {
+            let x = 3;
+            document.getElementById("p2").innerHTML="x:"+x;
+        }
+
+        const  PI = 3.1415926;//const变量不可修改
+        try{
+            PI = 3.21;
+        }catch(err){
+            console.log(err.message);
+        }
+    </script>
+</body>
+</html>

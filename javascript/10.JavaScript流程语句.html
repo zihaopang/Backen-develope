@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- https://www.runoob.com/js/js-switch.html -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+    <button type="button" onclick="fun1()">点击一下</button>
+    <button type="button" onclick="fun2()">点击一下</button>
+
+    <script>
+        var x = 4;
+        function fun1(){
+            if(x < 1){
+                document.getElementById("demo1").innerHTML="小于1";
+            }else if(x < 3){
+                document.getElementById("demo1").innerHTML="大于等于1小于3";
+            }else{
+                document.getElementById("demo1").innerHTML="大于等于3";
+            }
+        }
+
+        function fun2(){
+            switch(x){
+                case 1:{
+                    document.getElementById("demo2").innerHTML="case1";
+                    break;
+                }
+                case 2:{
+                    document.getElementById("demo2").innerHTML="case2";
+                    break; 
+                }
+                case 3:{
+                    document.getElementById("demo2").innerHTML="case3";
+                    break;
+                }
+                default:{
+                    document.getElementById("demo2").innerHTML="default";
+                    break;
+                }
+            }
+        }
+    </script>
+</body>
+</html>

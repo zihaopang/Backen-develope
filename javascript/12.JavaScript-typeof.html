@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="demo"></p>
+
+    <script>
+        document.getElementById("demo").innerHTML=
+        typeof 1 + "<br>" +                         //number
+        typeof 1.23 + "<br>" +                      //number
+        typeof "123" + "<br>" +                     //String
+        typeof null + "<br>" +                      //object
+        typeof [1,2,3] + "<br>" +                   //object
+        typeof {name:"pangzihao",age:30} + "<br>";  //object
+    </script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+</head>
+<body>
+    <p>fade效果</p>
+    <button id="fadeIn">淡入</button>
+    <button id="fadeOut">淡出</button>
+    <button id="fadeIn_Out">淡入淡出</button>
+
+    <script>
+        $(document).ready(function(){
+            /*
+            fadeIn,fadrOut,toggle都可选“slow”,"fast",毫秒值选项
+            */
+            $("#fadeIn").click(function(){
+                $("p").fadeIn();
+            });
+            $("#fadeOut").click(function(){
+                $("p").fadeOut("slow");
+            });
+            $("#fadeIn_Out").click(function(){
+                $("p").toggle(3000);
+            });
+        });
+    </script>
+</body>
+</html>

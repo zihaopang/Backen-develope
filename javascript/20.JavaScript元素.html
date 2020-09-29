@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- https://www.runoob.com/js/js-htmldom-elements.html -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="demo">
+        
+    </div>
+    <script>
+        // appendChild()将新元素添加到一个div内最后的位置
+        var x = document.createElement("p");
+        var y = document.createTextNode("这是x的孩子");
+        x.appendChild(y);//也就是p中有文字了
+        var z = document.getElementById("demo");
+        z.appendChild(x);
+
+        //insertBefore()将新元素添加到一个div内开始位置
+        var a = document.createElement("p");
+        var b = document.createTextNode("这是a的孩子");
+        a.appendChild(b);//也就是p中有文字了
+
+        z.insertBefore(a,x);
+
+        //移除已存在的元素
+        //a.removeChild(b);
+
+        //替换孩子,有错误
+        var d = document.createTextNode("这是b替换后的孩子");
+        z.replaceChild(x,b);
+    </script>
+</body>
+</html>

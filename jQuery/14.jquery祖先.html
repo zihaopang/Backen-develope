@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width='device-width', initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+</head>
+<body>
+    <div id="div1">
+        
+        <div id="div2">
+            
+            <ul id="ul">
+                <li id="li"></li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        $(document).ready(function(){
+            $("li").parent().css({
+                "background-color":"red",
+            });
+            $("li").parents().css({
+                "border":"2px solid green",
+            });
+            $("ul").parentsUntil("#div1").css({
+                "border":"2px solid yellow",
+            });
+        });
+    </script>
+</body>
+</html>

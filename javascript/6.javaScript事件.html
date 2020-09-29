@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- https://www.runoob.com/js/js-events.html -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function dispalyDate(){
+            document.getElementById("demo").innerHTML=Date();
+        }
+    </script>
+</head>
+<body>
+    <p id="demo"></p>
+    <!-- 点击事件 -->
+    <button type="button" onclick="getElementById('demo').innerHTML=Date()">点击一下</button>
+    <!-- 自身事件 -->
+    <button type="button" onclick="this.innerHTML=Date()">点击一下</button>
+    <!-- 函数事件 -->
+    <button type="button" onclick="dispalyDate()">点击一下</button>
+    <!-- 
+        常用事件：
+        onchange	HTML 元素改变
+        onclick	    用户点击 HTML 元素
+        onmouseover	用户在一个HTML元素上移动鼠标
+        onmouseout	用户从一个HTML元素上移开鼠标
+        onkeydown	用户按下键盘按键
+        onload	    浏览器已完成页面的加载
+     -->
+</body>
+</html>

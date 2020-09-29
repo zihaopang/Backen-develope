@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>点我消失</p>
+    <p id="test1">点按钮1我消失</p>
+    <p class="test2">点按钮1我也消失</p>
+    <button>按钮1</button><br>
+
+    <a target="_blank" href="https://www.runoob.com/jquery/jquery-selectors.html">更多选择器示例</a>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script>
+       
+        $(document).ready(function(){
+             //1.元素选择器
+            $("p").click(function(){
+                $(this).hide();
+            });
+            //2.id选择器
+            $("button").click(function(){
+                $("#test1").hide();
+            });
+            //3.class选择器
+            $("button").click(function(){
+                $(".test2").hide();
+            });
+        });
+           
+
+    </script>
+</body>
+</html>

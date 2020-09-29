@@ -26,7 +26,7 @@
 
 UserDao.java:
 
-```
+```java
 public interface UserDao {
 	public void getInfo();
 }
@@ -34,7 +34,7 @@ public interface UserDao {
 
 UserDaoMySqlImpl.java:
 
-```
+```java
 public class UserDaoMySqlImpl implements UserDao{
 
 	/* (non-Javadoc)
@@ -51,7 +51,7 @@ public class UserDaoMySqlImpl implements UserDao{
 
 UserDaoOracleImpl.java:
 
-```
+```java
 public class UserDaoOraclImpl implements UserDao{
 
 	/* (non-Javadoc)
@@ -68,7 +68,7 @@ public class UserDaoOraclImpl implements UserDao{
 
 UserService.java:
 
-```
+```java
 public interface UserService {
 	public void getUser();
 }
@@ -76,7 +76,7 @@ public interface UserService {
 
 UserServiceImpl.java:
 
-```
+```java
 public class UserServiceImpl implements UserService{
 	private UserDao userDao = null;
 	
@@ -98,7 +98,7 @@ public class UserServiceImpl implements UserService{
 
 Test.java:
 
-```
+```java
 public class Test {
 	public static void main(String[] args) {
 		UserServiceImpl userService = new UserServiceImpl();
@@ -134,7 +134,7 @@ public class Test {
 
 Hello.java文件
 
-```
+```java
 public class Hello {
 
 	private String name;
@@ -149,7 +149,7 @@ public class Hello {
 
 bean.xml文件：
 
-```
+```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
@@ -164,7 +164,7 @@ bean.xml文件：
 
 Test.java文件：
 
-```
+```java
 public class Test {
 	public static void main(String[] args) {
 		//解析bean.xml文件 申请管理响应的bean对象
@@ -193,7 +193,7 @@ IOC的实现其实就是bean工厂
 
 Test.java:
 
-```
+```java
 public class Test {
 	public static void main(String[] args) {
 		ApplicationContext ac = new ClassPathXmlApplicationContext("beans.xml");
@@ -205,7 +205,7 @@ public class Test {
 
 beans.xml:
 
-```
+```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
@@ -225,7 +225,7 @@ beans.xml:
 
 User.java:
 
-```
+```java
 public class User {
 	private String name;
 	
@@ -254,7 +254,7 @@ public class User {
 
 Test.java:
 
-```
+```java
 public class Test {
 	public static void main(String[] args) {
 		ApplicationContext ac = new ClassPathXmlApplicationContext("beans.xml");
@@ -266,7 +266,7 @@ public class Test {
 
 beans.xml:
 
-```
+```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
@@ -283,7 +283,7 @@ beans.xml:
 
 User.java:
 
-```
+```java
 public class User {
 	private String name;
 	
@@ -315,7 +315,7 @@ public class User {
 
 Test.java:
 
-```
+```java
 public class Test {
 	public static void main(String[] args) {
 		ApplicationContext ac = new ClassPathXmlApplicationContext("beans.xml");
@@ -327,7 +327,7 @@ public class Test {
 
 beans.xml:
 
-```
+```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
@@ -355,7 +355,7 @@ beans.xml:
 
 UserFactory.java
 
-```
+```java
 public class UserFactory {
 	public static User newInstance(String name){
 		return new User(name);
@@ -365,7 +365,7 @@ public class UserFactory {
 
 beans.xml:
 
-```
+```xml
 	<bean id="user2" class="cn.pu.factory.UserFactory" factory-method="newInstance">
 		<constructor-arg index="0" value="王五"/>
 	</bean>	
@@ -375,7 +375,7 @@ beans.xml:
 
 UserDynamicFactory.java:
 
-```
+```java
 public class UserDynamicFactory {
 	public User newInstance(String name){
 		return new User(name);
@@ -385,7 +385,7 @@ public class UserDynamicFactory {
 
 beans.xml:
 
-```
+```xml
 <bean id="userFactory2" class="cn.pu.factory.UserDynamicFactory"/>
 <bean id="userFactory1" factory-bean="userFactory2" factory-method="newInstance">
 		<constructor-arg index="0" value="王五"/>
@@ -394,7 +394,7 @@ beans.xml:
 
 Test.java:
 
-```
+```java
 public class Test {
 	public static void main(String[] args) {
 		ApplicationContext ac = new ClassPathXmlApplicationContext("beans.xml");
@@ -413,7 +413,7 @@ public class Test {
 - class是bean的全限定名=包名+类名
 - 如果不配置id和name，那么可以根据applicationContext.getBean(class)获取对象
 比如：
-```
+```xml
 <bean id="user" name="hello u2,u3;u4"class="cn.pu.vo.User">
 	<property name="name" value="张三"></property>
 </bean>
@@ -423,7 +423,7 @@ public class Test {
 ![6.import](https://github.com/zihaopang/Backen-develope/blob/master/pics/ssm/6.import.JPG)
 
 beans.xml
-```
+```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
@@ -435,7 +435,7 @@ beans.xml
 
 entity.xml:
 
-```
+```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
@@ -467,7 +467,7 @@ entity.xml:
 注入：指的是Bean对象依赖的资源由容器来设置和装配。
 2、spring的注入：构造器注入
 
-```
+```xml
 <bean id="user1" class="cn.pu.vo.User">
 	<!-- index指的是构造参数的下标，从0开始 -->
 	<constructor-arg index="0" value="李四"/>
@@ -484,7 +484,7 @@ entity.xml:
 
 1.常量注入
 
-```
+```xml
 	<bean id="student" class="cn.pu.vo.Student">
 	<property name="name" value="zhangsan"/>
 	</bean>
@@ -492,7 +492,7 @@ entity.xml:
 
 2.bean的注入（对象注入）
 
-```
+```xml
 	<bean id="addr" class="cn.pu.vo.Address">
 		<property name="address" value="江苏南京"/>
 	</bean>
@@ -504,7 +504,7 @@ entity.xml:
 
 3.数组注入
 
-```
+```xml
 	<bean id="student" class="cn.pu.vo.Student">
 		<property name="name" value="zhangsan"/>
 		<property name="addr" ref="addr" />
@@ -520,7 +520,7 @@ entity.xml:
 
 4.List注入
 
-```
+```xml
     <property name="hobbies">
         <list>
             <value>羽毛球</value>
@@ -533,7 +533,7 @@ entity.xml:
 
 5.map注入
 
-```
+```xml
     <property name="card">
         <map>
             <entry key="中国银行" value="1234567878"/>
@@ -547,7 +547,7 @@ entity.xml:
 
 6.set注入
 
-```
+```xml
     <property name="games">
         <set>
             <value>lol</value>
@@ -560,13 +560,13 @@ entity.xml:
 
 7.Null注入
 
-```
+```xml
 <property name="wife"><null/></property>
 ```
 
 - properties注入
 
-```
+```xml
     <property name="info">
         <props>
             <prop key="学号">20</prop>
@@ -579,13 +579,13 @@ entity.xml:
 8.P命名空间注入
 
 在xml头文件中加入：
-```
+```xml
 xmlns:p="http://www.springframework.org/schema/p"
 ```
 
 User.java(User类)
 
-```
+```java
 public class User {
 	private String name;
 	private String addr;
@@ -604,20 +604,20 @@ public class User {
 
 beans.xml:
 
-```
+```xml
 <bean id="user" class="cn.pu.vo.User" p:name="风清扬" p:addr="江苏南京"/>
 ```
 
 9.c命名空间注入
 
 在xml头文件中加入：
-```
+```xml
 xmlns:c="http://www.springframework.org/schema/c"
 ```
 
 beans.xml:
 
-```
+```xml
 <bean id="user" class="cn.pu.vo.User" c:name="风清扬" c:addr="江苏南京"/>
 ```
 但是C命名空间注入需要有对应参数的构造方法
@@ -629,7 +629,7 @@ singleton:单例模式，整个容器中只有一个对象实例
 
 举例：
 
-```
+```xml
 	<bean id="addr" class="cn.pu.vo.Address" scope="sigleton">
 		<property name="address" value="江苏南京"/>
 	</bean>
@@ -666,7 +666,7 @@ prototype:每次获取bean都产生一个新的对象：scope="prototype"
 
 抽象接口：出租
 
-```
+```java
 public interface Rent {
 	public void rent();
 }
@@ -674,7 +674,7 @@ public interface Rent {
 
 真实角色：房东
 
-```
+```java
 public class Host implements Rent{
 	//租房子
 	public void rent(){
@@ -685,7 +685,7 @@ public class Host implements Rent{
 
 代理角色：中介
 
-```
+```java
 public class Proxy implements Rent{
 	private Host host;//房主授权
 	public void rent(){
@@ -713,7 +713,7 @@ public class Proxy implements Rent{
 
 客户：
 
-```
+```java
 public class Client {
 	public static void main(String[] args) {
 		Host host = new Host();
@@ -752,14 +752,14 @@ InvocationHandler是代理实例的调用处理程序实现的接口。
 每个代理实例都具有一个关联的调用处理程序。对代理实例调用方法时，将对调用方法进行编码并将其指派到它的调用处理程序invoke方法。
 
 invoke方法：
-```
+```xml
 invoke(Object proxy,Method method,Object[] args):在代理实例上处理方法调用并返回结果
 ```
 
 Proxy类：
 Proxy提供用于创建动态代理类和实例的静态方法，他还是由这些方法创建的所有动态代理类的父类。
 
-```
+```xml
 Static Object newProxyInstance(ClassLoader loader,Class<?>[] interfaces,InvocationHandler h)
 返回一个指定接口的代理类实例，该接口可以将方法调用指派到指定的调用处理程序。
 ```
@@ -772,7 +772,7 @@ Static Object newProxyInstance(ClassLoader loader,Class<?>[] interfaces,Invocati
 
 proxyInovatonHandler.java:
 
-```
+```java
 public class ProxyInovationHandler implements InvocationHandler{
 	private Object target;//真实对象 
 	
@@ -816,7 +816,7 @@ public class ProxyInovationHandler implements InvocationHandler{
 
 Host.java:
 
-```
+```java
 public class Host implements Rent{
 	//租房子
 	public void rent(){
@@ -827,7 +827,7 @@ public class Host implements Rent{
 
 Rent.java:
 
-```
+```java
 public interface Rent {
 	public void rent();
 }
@@ -835,7 +835,7 @@ public interface Rent {
 
 Client.java:
 
-```
+```java
 public class Client {
 	public static void main(String[] args) {
 		Host host = new Host();
@@ -896,7 +896,7 @@ aopalliance.jar,aspectjweaver-1.8.9.jar
 
 log.java:
 
-```
+```java
 public class Log implements MethodBeforeAdvice{
 
 	/* @param method 被调用的方法对象
@@ -915,7 +915,7 @@ public class Log implements MethodBeforeAdvice{
 
 UserService.java:
 
-```
+```java
 public interface UserService{
 	public void add();
 	public void delete();
@@ -924,7 +924,7 @@ public interface UserService{
 
 UserServiceImpl.java:
 
-```
+```java
 public class UserServiceImpl implements UserService{
 
 	/* (non-Javadoc)
@@ -950,7 +950,7 @@ public class UserServiceImpl implements UserService{
 
 Test.java:
 
-```
+```java
 public class Test {
 	public static void main(String[] args) {
 		ApplicationContext ac = new ClassPathXmlApplicationContext("beans.xml");
@@ -962,7 +962,7 @@ public class Test {
 
 bean.xml:
 
-```
+```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
@@ -983,13 +983,13 @@ bean.xml:
 
 关于这一句：
 
-```
+```xml
 		<aop:pointcut expression="execution(* cn.pu.service.UserServiceImpl.add())" id="pointcut"/>
 ```
 
 可以对类中的所有方法进行一个切片：
 
-```
+```xml
 		<aop:pointcut expression="execution(* cn.pu.service.UserServiceImpl.*())" id="pointcut"/>
 ```
 
@@ -1005,7 +1005,7 @@ bean.xml:
 
 Log.java:
 
-```
+```java
 public class Log {
 
 	public void before(){
@@ -1019,7 +1019,7 @@ public class Log {
 
 beans.xml:
 
-```
+```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
@@ -1049,7 +1049,7 @@ beans.xml:
 
 Log.java:
 
-```
+```java
 @Aspect//表示为切面类
 public class Log {
 	//表示为前置通知函数

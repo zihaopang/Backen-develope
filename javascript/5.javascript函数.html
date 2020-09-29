@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- https://www.runoob.com/js/js-functions.html -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function myFunction1(){
+            alert("函数测试");
+        }
+        function myFunction2(name,age){
+            alert("name:"+name+" age:"+age);
+        }
+        function myFunction3(a,b){
+            return a*b;
+        }
+    </script>
+</head>
+<body>
+    <button type="button" onclick="myFunction1()">点击1</button>
+    <button type="button" onclick="myFunction2('Jhon',30)">点击2</button>
+    <p id="demo"></p>
+    <script>
+        document.getElementById("demo").innerHTML=myFunction3(20,30);
+    </script>
+
+</body>
+</html>

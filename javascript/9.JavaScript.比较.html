@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- https://www.runoob.com/js/js-comparisons.html -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+    <p id="demo3"></p>
+    <p id="demo4"></p>
+    <p id="demo5"></p>
+
+    <button type="button" onclick="myFinction()">点击一下</button>
+    <script>
+        var x = 5;
+        function myFinction(){
+            document.getElementById("demo1").innerHTML= x=="5";//比较，值相等
+            document.getElementById("demo2").innerHTML= x==="5";//值和类型均相等
+            document.getElementById("demo3").innerHTML= x!="5";//不等于，值相等就行
+            document.getElementById("demo4").innerHTML= x!=="5";//不绝对等于，值和类型有一个不相等都不行
+            document.getElementById("demo5").innerHTML= x==5?"等于5":"不等于5";//三目运算
+        }
+    </script>
+</body>
+</html>

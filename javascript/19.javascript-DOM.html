@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- https://www.runoob.com/js/js-htmldom-events.html -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="p1"></div>
+    <p>aaa</p>
+    <b class="p3"></b>
+    <p id="p2">DOM CSS</p>
+
+    <!-- DOM事件:click事件 -->
+    <h1 onclick="this.innerHTML='你点了我'">点我</h1>
+    <h2 onclick="func1(this)">点击我调用函数</h2>
+    <!-- DOM事件:onchange 事件 -->
+    <input onchange="func2(this)" type="text">
+    <!-- DOM事件:onMouse事件 -->
+    <p onmouseover="func3(this)" onmouseout="func4(this)">moMouseOnOver测试</p>
+    <p onmousedown="func5(this)" onmouseup="func6(this)">moMouseDownUp测试</p>
+
+    <!-- EventListener -->
+    <button id="b1">eventlistener测试</button>
+    <p id="p4"></p>
+    <button id="b2">eventlistener原句句柄测试</button>
+    <button id="b3">eventlistener带参数测试</button>
+    <button id="b4" onclick="remove()">removelistener测试</button>
+    
+    <script>
+        var x = document.getElementById("p1");//根据id
+        var y = document.getElementsByTagName("p");//根据tag名称
+        var z = document.getElementsByClassName("p3");//根据class
+        x.innerHTML = "hello";
+        y[0].innerHTML = "world";
+        z[0].innerHTML = "zihao";
+
+        //DOM HTML
+        // document.getElementById("image").src="landscape.jpg";//改变图片src
+
+        //DOM CSS
+        document.getElementById("p2").style.color="red";
+        document.getElementById("p2").style.fontFamily="Arial";
+        document.getElementById("p2").style.fontSize="20";
+
+        //DOM事件
+        function func1(a){//click事件
+            a.innerHTML= Date();
+        }
+        function func2(b){//onchange 事件
+            b.value = b.value.toUpperCase();
+        }
+        function func3(obj){//onMouseOver事件
+            obj.innerHTML="放在我上面了";
+        }
+        function func4(obj){//onMouseOver事件
+            obj.innerHTML = "离开我了";
+        }
+        function func5(obj){//onmouseDown操作
+            obj.style.color="blue";
+        }
+        function func6(obj){//onmouseUp操作
+            obj.style.color="red";
+        }
+
+        //eventListener
+        document.getElementById("b1").addEventListener("click",func7);//click可以是onmouseOver等
+        function func7(){
+            document.getElementById("p4").innerHTML=Date();
+        }
+        //直接添加eventListener
+        document.getElementById("b2").addEventListener("click",
+                                                        function(){alert("hello");
+                                                        });
+        //window对象直接添加eventListener
+        window.addEventListener("resize",function(){alert("修改了窗口大小！");});
+        //带参数的eventListener
+        var a = 10,b = 3;
+        document.getElementById("b3").addEventListener("click",function(){func7(a,b);});
+        function func7(a,b){
+            var c = a+b;
+            alert("eventLister结果："+c);
+        }
+        //removelistener
+        function remove(){
+            document.getElementById("b1").removeEventListener("click",func7);
+        }
+    </script>
+</body>
+</html>

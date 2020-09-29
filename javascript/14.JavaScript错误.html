@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input id="number" type="text">
+    <p id="demo"></p>
+    <button type="button" onclick="fun()">点击</button>
+
+    <script>
+        function fun(){
+            var x,y;
+            x = document.getElementById("number").value;
+            y = document.getElementById("demo");
+            try{
+                if(isNaN(x)){
+                    y.innerHTML = "不是一个数字"
+                }else if(x == ""){
+                    y.innerHTML = "数值为空"
+                }else if(Number(x) < 3 || Number(x) > 6){
+                    y.innerHTML = "小于3或者大于6了";
+                }else{
+                    ss;//错误捕捉
+                    y.innerHTML = "输入成功！";
+                }               
+            }catch(err){
+                console.log(err);
+            }finally{
+                console.log("已输入！");
+            }
+        }
+    </script>
+</body>
+</html>

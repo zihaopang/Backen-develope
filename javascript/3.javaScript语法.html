@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- https://www.runoob.com/js/js-syntax.html -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+    <p id="demo3"></p>
+    <p id="demo4"></p>
+    <p id="demo5"></p>
+    <script>
+        document.getElementById("demo1").innerHTML=123e5;//科学变量
+        document.getElementById("demo2").innerHTML="hello";//字符串单双引号都可以
+        document.getElementById("demo3").innerHTML=3*5;//计算变量
+        var length;//定义变量
+        length = 6;
+        document.getElementById("demo4").innerHTML=length;
+
+        var x,y,z;
+        x = 5;
+        y = 6;
+        z = (x+y)*10;
+        document.getElementById("demo5").innerHTML=z;//复制运算符
+
+        //数据类型
+        var len = 17;
+        var str = "hello";
+        var multi = 5*6;
+        var cars = ["奔驰","宝马"];
+        var person = {firstName:"Jhon",lastName:"piter"};
+        var name="Jhon",num=10,cat='mimi';//一条语句，多个变量
+        var check=true;//布尔值
+        var empty = null;//可用来清空对象
+
+        //代码折行
+        document.write("你好\
+        世界")
+    </script>
+</body>
+</html>

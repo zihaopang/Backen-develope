@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+</head>
+<body>
+    <p id="p1">这是段落一</p>
+    <p id="p2">这是段落二</p>
+    <p id="p3">这是段落三</p>
+    <div style="background-color: red;height: 200px;width: 200pw;">
+        <p>这是div中的孩子1</p>
+        <p>这是div中的孩子1</p>
+        <p>这是div中的孩子1</p>
+    </div>
+    <button id="btn1">删除div</button><br>
+    <button id="btn2">清空div</button><br>
+    <button id="btn3">删除p中所用id为p1的段落</button><br>
+
+    <script>
+        $(document).ready(function(){
+            $("#btn1").click(function(){
+                $("div").remove();
+            });
+            $("#btn2").click(function(){
+                $("div").empty();
+            });
+            $("#btn3").click(function(){
+                $("p").remove("#p1");
+            });
+        });
+
+    </script>
+</body>
+</html>

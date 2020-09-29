@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var x = "hello world!";
+        var index = x.indexOf("world");
+        document.write(index+"<br>");
+
+        //match()函数用来查找字符串中特定的字符，并且如果找到的话，则返回这个字符。
+        document.write(x.match("hello")+"<br>");
+        //replace() 方法在字符串中用某些字符替换另一些字符
+        document.write(x.replace("hello","nihao")+"<br>");
+        //字符串大小写转换使用函数 toUpperCase() / toLowerCase():
+        document.write(x.toUpperCase()+"<br>");
+        //字符串转为数组
+        var arr = x.split(' ');
+        document.write(arr[0]+"<br>");
+        //更多属性和方法：https://www.runoob.com/js/js-obj-string.html
+    </script>
+</body>
+</html>

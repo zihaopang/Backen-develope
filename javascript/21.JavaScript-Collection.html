@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>hello</p>
+    <p>world</p>
+    <p>zihao</p>
+    <p id="demo"></p>
+    
+    <script>
+        var collection = document.getElementsByTagName("p");
+        alert(collection[1].innerHTML);
+
+        for(var i = 0; i < collection.length; i++){
+            collection[i].style.color="red";
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- https://www.runoob.com/js/js-loop-for.html -->
+    <!-- https://www.runoob.com/js/js-loop-while.html -->
+    <!-- https://www.runoob.com/js/js-break.html -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="demo1"></p>
+    <button type="button" onclick="fun1()">点击</button>
+    <p id="demo2"></p>
+    <button type="button" onclick="fun2()">点击</button>
+
+    <script>
+        var x = "";
+        var car = ["car1","car2","car3","car4","car5"];
+        function fun1(){
+            for(var i = 0; i < 5; i++){//for循环
+                x = x + i + "<br>";
+            }
+            document.getElementById("demo1").innerHTML=x;
+        }
+
+        function fun2(){
+            var i = 0;
+
+            while(i < 5){
+                x = x + " " +car[i];
+                i++;
+                if(i == 3){
+                    break;//break语句
+                }
+                if(i == 4){
+                    continue;//continue语句
+                }
+            }
+            document.getElementById("demo2").innerHTML=x;
+
+        }
+
+
+    </script>
+</body>
+</html>

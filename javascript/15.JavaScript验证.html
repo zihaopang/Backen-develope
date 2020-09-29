@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form name="form1" action="/" method="POST" onsubmit="return check1()">
+     姓名：<input id="name1" type="text">
+        <input name="submit" type="submit" value="提交">
+    </form>
+    
+    <form name="form2" action="/" method="POST" onsubmit="return check2()">
+        姓名：<input id="name2" type="text" min="100" max="200">
+        <input name="submit" type="submit" value="提交">
+        <p id="info"></p>
+    </form>
+
+    <script>
+        function check1(){
+            var name = document.getElementById("name1").value;
+            if(name=="" || name==null){
+                alert("姓名未填写");
+                return false;
+            }
+        }
+
+        function check2(){
+            var nameObj = document.getElementById("name2");
+
+            if(nameObj.validity.rangeOverflow){
+                document.getElementById("info").innerHTML="输入太大了！";
+                return false;
+            }
+
+            if(nameObj.checkValidity() == false){
+                document.getElementById("info").innerHTML="输入错误！";
+                return false;
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- https://www.runoob.com/js/js-strings.html -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+<body>
+    <p id="demo"></p>
+
+    <script>
+        var x = 'It\'s all right';//转义字符
+        var y = "he is called \"Jhon\"";//转义字符
+        var z = "he is called 'jhon'";//穿插单引号
+        document.getElementById("demo").innerHTML=z;
+        var len = z.length;//字符串长度
+        //更多字符串方法参看：https://www.runoob.com/js/js-strings.html
+    </script>
+</body>
+</html>

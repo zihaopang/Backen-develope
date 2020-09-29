@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            height: 200px;
+            width: 200px;
+            border: 1px solid;
+            padding: 5px;
+            margin: 5px;
+        }
+    </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+</head>
+<body>
+    <div class="box"></div>
+
+    <script>
+        $(document).ready(function(){
+           var x = "width:"+$("div").width()+" height:"
+            +$("div").height()+" innerheight:"+$("div").innerHeight()
+            +" innerwidth:"+$("div").innerWidth()+" outerWidth:"+$("div").outerWidth()+
+            " outerHeight:"+$("div").outerHeight();
+
+            alert(x);
+        });
+    </script>
+</body>
+</html>

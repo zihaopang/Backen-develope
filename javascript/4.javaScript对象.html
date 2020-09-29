@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- https://www.runoob.com/js/js-obj-intro.html -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    var person1={name:"pang",age:20};
+    var person2={//也可以这样写
+        name:"zihao",
+        age:"20",
+        addr:"nanjing",
+        school:"nanyou",
+
+        fullName : function(){//javascript函数
+            return this.name+":"+this.age;
+        }
+    }
+</script>
+<body>
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+    <p id="demo3"></p>
+
+    <script>
+        //获取对象
+        document.getElementById("demo1").innerHTML="age:"+person1.age+" name:"+person1.name;
+        //第二种获取对象的方式
+        document.getElementById("demo2").innerHTML="age:"+person2["age"]+" name:"+person2["name"];
+        //调用函数
+        document.getElementById("demo3").innerHTML=person2.fullName();
+    </script>
+</body>
+</html>

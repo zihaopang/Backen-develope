@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        var obj =new Object();
+        obj.name = "zihao";
+        obj.age = 20;
+        document.write("name:"+obj.name+" age:"+obj.age+"<br>");
+
+        var obj1 = {"name":"pangzihao","age":20};
+        document.write("name:"+obj1.name+" age:"+obj1.age+"<br>");
+
+        function person(name,age){
+            this.name = name;
+            this.age = age;
+            this.changeName=changeName;
+            function changeName(othername){
+                this.name = othername;
+            }
+        }    
+        var obj2 = new person("lijun",20);
+
+        document.write("name:"+obj2.name+" age:"+obj2.age+"<br>");
+        obj2.changeName("chouyin");
+        document.write("name:"+obj2.name+" age:"+obj2.age+"<br>");
+        obj2.age = 10;
+        document.write("name:"+obj2.name+" age:"+obj2.age+"<br>");
+
+    </script>
+</body>
+</html>

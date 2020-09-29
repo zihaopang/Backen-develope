@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+</head>
+<body>
+    <p>测试</p>
+    <button id="btn1">点击</button>
+    <button id="btn2">链技术演示</button>
+
+    <script>
+        $(document).ready(function(){
+
+            $("#btn1").click(function(){
+                $("p").hide(1000,function(){
+                    alert("p被隐藏了");
+                });
+            });
+
+            $("#btn2").click(function(){//链技术
+                $("p").css("color","red").slideUp(1000).slideDown(1000);
+            });
+
+        });
+    </script>
+</body>
+</html>

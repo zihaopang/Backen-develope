@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+
+</head>
+<body>
+    <p id="p1">中间文本</p>
+
+    <button id="btn1">末尾添加文本</button><br>
+    <button id="btn2">开头添加文本</button><br>
+    
+    <button id="btn3">末尾添加文本</button><br>
+    <button id="btn4">开头添加文本</button><br>
+    <script>
+        $(document).ready(function(){
+            $("#btn1").click(function(){
+                $("#p1").append("使用append在后面添加");
+            });
+            $("#btn2").click(function(){
+                $("#p1").prepend("使用perpend在前面添加");
+            });
+
+            /*
+            append/prepend 是在选择元素内部嵌入。
+            after/before 是在元素外面追加。
+            */
+            $("#btn3").click(function(){
+                $("#p1").after("使用after在后面添加");
+            });
+            $("#btn4").click(function(){
+                $("#p1").before("使用before在前面添加");
+            });
+        });
+    </script>
+
+</body>
+</html>

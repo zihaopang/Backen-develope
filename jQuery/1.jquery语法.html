@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <a>https://www.runoob.com/jquery/jquery-syntax.html</a>
+    <p>点我消失</p>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("p").click(function(){
+                $(this).hide();
+            });
+        });
+
+        /*
+        基础语法： $(selector).action()
+        $(this).hide() - 隐藏当前元素
+        $("p").hide() - 隐藏所有 <p> 元素
+        $("p.test").hide() - 隐藏所有 class="test" 的 <p> 元素
+        $("#test").hide() - 隐藏 id="test" 的元素
+        */
+
+        /*
+        
+        $(document).ready(function(){
+         // 开始写 jQuery 代码...
+         });
+        这是为了防止文档在完全加载（就绪）之前运行 jQuery 代码，即在 DOM 加载完成后才可以对 DOM 进行操作。
+        */
+
+    </script>
+</body>
+</html>

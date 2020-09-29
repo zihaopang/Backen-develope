@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+
+</head>
+<body>
+    <button id="demo">动画</button>
+    <button id="start">开始滑动</button>
+    <button id="stop">停止滑动</button>
+    <div id="div1" style="height: 100px;width: 100px;background-color: red;position: absolute;"></div><br>
+    <div id="div2" style="padding:50px;background-color:green;display: none;">hello</div>
+
+    <script>
+        $(document).ready(function(){
+            //动画效果
+            $("#demo").click(function(){
+                $("#div1").animate(
+                {
+                    left:'250px',//右移250
+                    opacity:'0.5',//透明度
+                    height:'200px',//高度,也可以使用相对值：height:'+=200px'
+                    width:'200px'//宽度
+                });
+            });
+            //动画效果
+            $("#start").click(function(){
+                $("#div2").slideDown(5000);
+            });
+            //停止动画
+            $("#stop").click(function(){
+                $("#div2").stop();
+            });
+        });
+    </script>
+</body>
+</html>

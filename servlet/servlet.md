@@ -26,7 +26,7 @@ servlet功能介绍：
 
 实现javax.servlet.Servlet接口：
 
-```
+```java
 /*
  * servlet中的方法不由我们来调用，由tomcat来调用。
  * servlet对象也不由我们来创建，由tomcat来创建
@@ -99,7 +99,7 @@ Servlet由我们来写，但是对象由服务器来创建，并且由服务器�
 所以要在web.xml中对servlet进行配置：
 web.xml:
 
-```
+```xml
 <servlet>
 	<servlet-name>XXX<servlet-name>
     <servlet-class>com.web.servlet</servlet-class>
@@ -128,7 +128,7 @@ servletConfig这个类保存着其对应的web.xml的信息，比如servlet-name
 
 web.xml:
 
-```
+```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" id="WebApp_ID" version="3.0">
   <display-name>servlet1</display-name>
@@ -163,7 +163,7 @@ web.xml:
 
 init函数：
 
-```
+```java
 	/*
 	 * 他是生命周期方法
 	 * 他会在Servlet对象创建之后马上执行，并且只执行一次
@@ -191,7 +191,7 @@ Generic是Servlet的接口实现类，我么可以通过继承GenericServlet来�
 
 举例：
 
-```
+```java
 /**
  * @author pangzihao
  * CServlet
@@ -241,7 +241,7 @@ HttpServlet工作流程简介：
 
 示例代码：
 
-```
+```java
 /**
  * @author pangzihao
  * DServlet
@@ -291,7 +291,7 @@ public class DServlet extends HttpServlet{
 
 可以在<servlet-mapping>中给出多个<url-pattern>，例如：
 
-```
+```xml
 <servlet-mapping>
 	<servlet-name>Aservlet</servlet-name>
     <url-pattern>/Aservlet</url-pattern>
@@ -351,7 +351,7 @@ ServletContext是JavaWeb四大域对象之一：
 
 创建Aservlet.java:
 
-```
+```java
 public class Aservlet extends HttpServlet {
 	/**
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
@@ -372,7 +372,7 @@ public class Aservlet extends HttpServlet {
 
 创建Bservlet.java
 
-```
+```java
 /**
  * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
  */
@@ -414,7 +414,7 @@ public void doGet(HttpServletRequest request, HttpServletResponse response) thro
 
 代码：
 
-```
+```java
 /**
  * Servlet implementation class Aservlet
  */
@@ -465,7 +465,7 @@ public class Aservlet extends HttpServlet {
 
 代码：
 
-```
+```java
 /**
  * Servlet implementation class Aservlet
  */
@@ -540,7 +540,7 @@ void service(ServletRequest,ServletResponse)
 
 代码：
 
-```
+```java
 public class Aservlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
@@ -615,7 +615,7 @@ public class Aservlet extends HttpServlet {
 
 上面的代码使用反射调用了相应的方法，那么现在可以把反射调用的部分写成一个抽象类:BaseServlet，在想要某些方法的时候，直接继承BaseServlet即可。BaseServlet代码：
 
-```
+```java
 /**
  * @author pangzihao
  * BaseServlet
@@ -671,7 +671,7 @@ public abstract class BaseServlet extends HttpServlet {
 
 Cservlet.java:
 
-```
+```java
 /**
  * Servlet implementation class Cservlet
  * 
@@ -708,7 +708,7 @@ public class Cservlet extends BaseServlet {
 
 BaseServlet.java完整版本：
 
-```
+```java
 /**
  * @author pangzihao
  * BaseServlet

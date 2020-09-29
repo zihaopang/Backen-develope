@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+</head>
+<body>
+    <p>隐藏</p>
+
+    <button id="hide">隐藏</button>
+    <button id="show">显示</button>
+    <button id="hide_show">隐藏/显示</button>
+
+    <script>
+        $(document).ready(function(){
+            $("#show").click(function(){
+                $("p").show();
+            });
+            $("#hide").click(function(){
+                $("p").hide(1000);//可以选择隐藏速度
+            });
+            $("#hide_show").click(function(){//toggle隐藏显示一体化
+                $("p").toggle();
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- https://www.runoob.com/js/js-type-conversion.html -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+    <p id="demo3"></p>
+    <p id="demo4"></p>
+    <p id="demo5"></p>
+    <p id="demo6"></p>
+    <p id="demo7"></p>
+
+    <button type="button" onclick="fun1()">constructor</button><br>
+    <button type="button" onclick="fun2()">数字转字符串</button><br>
+    <button type="button" onclick="fun3()">布尔转字符串</button><br>
+    <button type="button" onclick="fun4()">日期转字符串</button><br>
+    <button type="button" onclick="fun5()">字符串转数字</button><br>
+    <button type="button" onclick="fun6()">布尔值转数字</button><br>
+    <button type="button" onclick="fun7()">日期转数字</button><br>
+
+
+
+    <script>
+        var x = "";
+
+        function fun1(){//constructor
+            document.getElementById("demo1").innerHTML=
+            "Jhon".constructor + "<br>" +
+            (3.14).constructor + "<br>" +
+            [1,2,3].constructor + "<br>" +
+            {name:"pang",age:20}.constructor + "<br>" +
+            false.constructor + "<br>" +
+            new Date().constructor;
+        }
+
+        function fun2(){//数字转化为字符串
+            document.getElementById("demo2").innerHTML=
+            String(123) + "<br>" +
+            String(12.3)+ "<br>";          
+        }
+        function fun3(){//布尔值转化为字符串
+            document.getElementById("demo3").innerHTML=
+            String(true) + "<br>" +
+            String(false)+ "<br>"; 
+        }
+        function fun4(){//日期转化为字符串
+            var date = new Date();
+
+            document.getElementById("demo4").innerHTML=
+            String(date) + "<br>"+
+            String(date.getFullYear())+":"+
+            String(date.getHours())+":"+String(date.getMinutes())+ "<br>";
+
+        }
+        function fun5(){//字符串转数字
+            document.getElementById("demo5").innerHTML=
+            Number("12") + "<br>" +
+            Number("12.3")+ "<br>"; 
+        }
+        function fun6(){//布尔值转数字
+            document.getElementById("demo6").innerHTML=
+            Number(true) + "<br>" +
+            Number(false)+ "<br>"; 
+        }
+        function fun7(){//布尔值转数字
+            var d = new Date();
+            document.getElementById("demo7").innerHTML=
+            Number(d) + "<br>";
+        }
+        
+    </script>
+</body>
+</html>

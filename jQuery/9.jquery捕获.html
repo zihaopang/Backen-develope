@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+
+</head>
+<body>
+    <p >这是段落中的<b>粗体</b>文本</p>
+    <a href="www.baidu.com">链接</a><br>
+    <input id="input1" type="text" value="test"><br>
+
+    <button id="btn1">显示text文本</button><br>
+    <button id="btn2">显示html文本</button><br>
+    <button id="btn3">获取input内容</button><br>
+    <button id="btn4">获取链接属性</button><br>
+    <button id="btn5">设置text文本</button><br>
+    <button id="btn6">设置html文本</button><br>
+    <button id="btn7">设置input内容</button><br>
+    <button id="btn8">设置链接属性</button><br>
+
+
+    <script>
+        //DOM = Document Object Model（文档对象模型）
+        $(document).ready(function(){
+            $("#btn1").click(function(){
+                alert($("p").text());
+            });
+
+            $("#btn2").click(function(){
+                alert($("p").html());
+            });
+
+            $("#btn3").click(function(){
+                alert($("#input1").val());
+            });
+
+            $("#btn4").click(function(){
+                alert($("a").attr("href"));
+            });
+
+            $("#btn5").click(function(){
+                $("p").text("设置的text文本");
+            });
+            $("#btn6").click(function(){
+                $("p").html("设置的<b>html</b>文本")
+            });
+            $("#btn7").click(function(){
+                $("#input1").val("设置的input文本");
+            });
+            $("#btn8").click(function(){
+                $("a").attr("href","www.88pu.top");
+            });
+        });
+    </script>
+</body>
+</html>

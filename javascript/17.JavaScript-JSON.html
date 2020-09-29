@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="demo"></p>
+    <script>
+        var text = '{"sites":['+
+            '{"name":"pang","age":20},'+
+            '{"name":"zi","age":21},'+
+            '{"name":"hao","age":22}]}';
+
+        var obj = JSON.parse(text);
+        document.getElementById("demo").innerHTML=obj.sites[1].name+"|"+obj.sites[1].age;
+    </script>
+</body>
+</html>

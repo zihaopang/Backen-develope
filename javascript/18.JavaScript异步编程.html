@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="demo"></p>
+
+    <script>
+        function func(){
+            document.getElementById("demo").innerHTML="延时5秒钟出现";
+        }
+
+        setTimeout(func,5000);
+
+        //也可以这样写
+        setTimeout(
+            function func(){
+                document.getElementById("demo").innerHTML="延时8秒钟出现";
+            },
+            8000
+        );
+    </script>
+</body>
+</html>

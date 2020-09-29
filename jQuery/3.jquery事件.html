@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>点击效果</p>
+    <p id="p1">鼠标离开进入</p>
+    <p id="p2">鼠标按下抬起</p>
+    <p id="p3">鼠标离开进入</p>
+    Name:<input type="text"><br>
+    Number:<input type="text"><br>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("p").click(function(){
+                $(this).hide();
+            });
+            $("p").dblclick(function(){
+                $(this).hide();
+            });
+            $("#p1").mouseenter(function(){
+                console.log("鼠标进入p1");
+            });
+            $("#p1").mouseleave(function(){
+                console.log("鼠标离开p1");
+            });
+            $("#p2").mousedown(function(){
+                alert("鼠标按下！");
+            });
+            $("#p2").mouseup(function(){
+                alert("鼠标抬起！");
+            });
+            //hover:当鼠标移动到元素上时，会触发指定的第一个函数(mouseenter);当鼠标移出这个元素时，会触发指定的第二个函数(mouseleave)。
+            $("#p3").hover(
+                function(){
+                    console.log("鼠标进入p3");
+                },
+                function(){
+                    console.log("鼠标离开p3");
+                }
+            );
+            //focus和blur，获得焦点和失去焦点
+            $("input").focus(function(){
+                $(this).css("background-color","#cccccc");
+            });
+            $("input").blur(function(){
+                $(this).css("background-color","#ffffff");
+            });
+        });
+        
+    </script>
+</body>
+</html>
