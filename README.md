@@ -54,11 +54,10 @@
 
 # 算法
 ### [1.排序](https://github.com/zihaopang/Backen-develope/blob/master/%E5%B7%A6%E7%A5%9E/%E6%8E%92%E5%BA%8F.md)
-
-&emsp;
-
-# 操作系统
-
+### [2.双指针](https://github.com/zihaopang/Backen-develope/blob/master/lettcode/%E5%8F%8C%E6%8C%87%E9%92%88.md)
+### [3.回溯法](https://github.com/zihaopang/Backen-develope/blob/master/lettcode/%E5%9B%9E%E6%BA%AF%E6%B3%95.md)
+### [4.滑动窗口](https://github.com/zihaopang/Backen-develope/blob/master/lettcode/%E6%BB%91%E5%8A%A8%E7%AA%97%E5%8F%A3.md)
+### [5.贪心算法](https://github.com/zihaopang/Backen-develope/blob/master/lettcode/%E8%B4%AA%E5%BF%83%E7%AE%97%E6%B3%95.md)
 &emsp;
 
 #  计算机网络
@@ -69,5 +68,11 @@
 
 # 项目
 
+### [物联网之家](https://github.com/zihaopang/Backen-develope/blob/master/project/myiothome%E9%A1%B9%E7%9B%AE%E6%96%87%E6%A1%A3/%E9%A1%B9%E7%9B%AE%E6%80%9D%E8%80%83.md)
+&emsp;
+
+# 操作系统
+
+&emsp;
 
 # 读书笔记
