@@ -58,6 +58,8 @@
 ### [3.回溯法](https://github.com/zihaopang/Backen-develope/blob/master/lettcode/%E5%9B%9E%E6%BA%AF%E6%B3%95.md)
 ### [4.滑动窗口](https://github.com/zihaopang/Backen-develope/blob/master/lettcode/%E6%BB%91%E5%8A%A8%E7%AA%97%E5%8F%A3.md)
 ### [5.贪心算法](https://github.com/zihaopang/Backen-develope/blob/master/lettcode/%E8%B4%AA%E5%BF%83%E7%AE%97%E6%B3%95.md)
+### [6.DFS](https://github.com/zihaopang/Backen-develope/blob/master/lettcode/DFS.md)
+### [7.其他](https://github.com/zihaopang/Backen-develope/blob/master/lettcode/%E5%85%B6%E4%BB%96.md)
 &emsp;
 
 #  计算机网络
