@@ -53,7 +53,7 @@
 ### [3.MyBatis]()
 
 # 算法
-### [1.排序](https://github.com/zihaopang/Backen-develope/blob/master/%E5%B7%A6%E7%A5%9E/%E6%8E%92%E5%BA%8F.md)
+### [1.动态规划](https://github.com/zihaopang/Backen-develope/blob/master/lettcode/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92.md)
 ### [2.双指针](https://github.com/zihaopang/Backen-develope/blob/master/lettcode/%E5%8F%8C%E6%8C%87%E9%92%88.md)
 ### [3.回溯法](https://github.com/zihaopang/Backen-develope/blob/master/lettcode/%E5%9B%9E%E6%BA%AF%E6%B3%95.md)
 ### [4.滑动窗口](https://github.com/zihaopang/Backen-develope/blob/master/lettcode/%E6%BB%91%E5%8A%A8%E7%AA%97%E5%8F%A3.md)
